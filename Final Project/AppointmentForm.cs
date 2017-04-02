@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace Final_Project
 {
-    public partial class LoginForm : Form
+    public partial class AppointmentForm : Form
     {
-        public LoginForm()
+        public AppointmentForm()
         {
             InitializeComponent();
-            
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            MainForm mf = new MainForm();
-            mf.Show();
-
         }
     }
 }
