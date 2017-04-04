@@ -22,7 +22,14 @@ namespace Final_Project
         {
             MainForm mf = new MainForm();
             mf.Show();
+            mf.Closed += (s, args) => this.Close();
+            this.Hide();
 
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

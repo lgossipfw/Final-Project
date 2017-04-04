@@ -30,14 +30,15 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.appointmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.File_Logout = new System.Windows.Forms.ToolStripMenuItem();
+            this.File_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.Appointments_ViewAll = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAllToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createContactListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Customers_ViewAll = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Users_ViewAll = new System.Windows.Forms.ToolStripMenuItem();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
@@ -49,7 +50,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.appointmentsToolStripMenuItem,
+            this.Appointments_ViewAll,
             this.customersToolStripMenuItem,
             this.usersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -61,31 +62,33 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logoutToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.File_Logout,
+            this.File_Exit});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // logoutToolStripMenuItem
+            // File_Logout
             // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
-            this.logoutToolStripMenuItem.Text = "Logout";
+            this.File_Logout.Name = "File_Logout";
+            this.File_Logout.Size = new System.Drawing.Size(211, 30);
+            this.File_Logout.Text = "Logout";
+            this.File_Logout.Click += new System.EventHandler(this.File_Logout_Click);
             // 
-            // exitToolStripMenuItem
+            // File_Exit
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(154, 30);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.File_Exit.Name = "File_Exit";
+            this.File_Exit.Size = new System.Drawing.Size(211, 30);
+            this.File_Exit.Text = "Exit";
+            this.File_Exit.Click += new System.EventHandler(this.File_Exit_Click);
             // 
-            // appointmentsToolStripMenuItem
+            // Appointments_ViewAll
             // 
-            this.appointmentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Appointments_ViewAll.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewAllToolStripMenuItem1});
-            this.appointmentsToolStripMenuItem.Name = "appointmentsToolStripMenuItem";
-            this.appointmentsToolStripMenuItem.Size = new System.Drawing.Size(138, 29);
-            this.appointmentsToolStripMenuItem.Text = "Appointments";
+            this.Appointments_ViewAll.Name = "Appointments_ViewAll";
+            this.Appointments_ViewAll.Size = new System.Drawing.Size(138, 29);
+            this.Appointments_ViewAll.Text = "Appointments";
             // 
             // viewAllToolStripMenuItem1
             // 
@@ -96,7 +99,8 @@
             // customersToolStripMenuItem
             // 
             this.customersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createContactListToolStripMenuItem});
+            this.createContactListToolStripMenuItem,
+            this.Customers_ViewAll});
             this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
             this.customersToolStripMenuItem.Size = new System.Drawing.Size(109, 29);
             this.customersToolStripMenuItem.Text = "Customers";
@@ -107,19 +111,26 @@
             this.createContactListToolStripMenuItem.Size = new System.Drawing.Size(244, 30);
             this.createContactListToolStripMenuItem.Text = "Create Contact List";
             // 
+            // Customers_ViewAll
+            // 
+            this.Customers_ViewAll.Name = "Customers_ViewAll";
+            this.Customers_ViewAll.Size = new System.Drawing.Size(244, 30);
+            this.Customers_ViewAll.Text = "View All";
+            this.Customers_ViewAll.Click += new System.EventHandler(this.Customers_ViewAll_Click);
+            // 
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewAllToolStripMenuItem});
+            this.Users_ViewAll});
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(67, 29);
             this.usersToolStripMenuItem.Text = "Users";
             // 
-            // viewAllToolStripMenuItem
+            // Users_ViewAll
             // 
-            this.viewAllToolStripMenuItem.Name = "viewAllToolStripMenuItem";
-            this.viewAllToolStripMenuItem.Size = new System.Drawing.Size(159, 30);
-            this.viewAllToolStripMenuItem.Text = "View All";
+            this.Users_ViewAll.Name = "Users_ViewAll";
+            this.Users_ViewAll.Size = new System.Drawing.Size(159, 30);
+            this.Users_ViewAll.Text = "View All";
             // 
             // dateTimePicker1
             // 
@@ -160,15 +171,16 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem appointmentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem File_Logout;
+        private System.Windows.Forms.ToolStripMenuItem File_Exit;
+        private System.Windows.Forms.ToolStripMenuItem Appointments_ViewAll;
         private System.Windows.Forms.ToolStripMenuItem viewAllToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createContactListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewAllToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Users_ViewAll;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem Customers_ViewAll;
     }
 }

@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace Final_Project
 {
-    public partial class MainForm : Form
+    public partial class AddCustomerForm : Form
     {
-        public MainForm()
+        public AddCustomerForm()
         {
             InitializeComponent();
         }
 
-        private void File_Logout_Click(object sender, EventArgs e)
+        private void AddCustomer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LoginForm lf = new LoginForm();
-            lf.Closed += (s, args) => this.Close();
-            lf.Show();
+            CustomerForm cf = new CustomerForm();
+            cf.Show();
         }
 
         private void File_Exit_Click(object sender, EventArgs e)
@@ -30,11 +29,10 @@ namespace Final_Project
             this.Close();
         }
 
-        private void Customers_ViewAll_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
             CustomerForm cf = new CustomerForm();
-            //lf.Closed += (s, args) => this.Close();
             cf.Show();
         }
     }

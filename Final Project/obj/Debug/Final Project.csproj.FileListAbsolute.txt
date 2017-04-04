@@ -9,3 +9,6 @@ C:\Users\Lea\Google Drive\School\CS 292 C#\Assignments\Final Project\Final Proje
 C:\Users\Lea\Google Drive\School\CS 292 C#\Assignments\Final Project\Final Project\obj\Debug\Final Project.pdb
 C:\Users\Lea\Google Drive\School\CS 292 C#\Assignments\Final Project\Final Project\obj\Debug\Final_Project.MainForm.resources
 C:\Users\Lea\Google Drive\School\CS 292 C#\Assignments\Final Project\Final Project\obj\Debug\Final_Project.AppointmentForm.resources
+C:\Users\Lea\Google Drive\School\CS 292 C#\Assignments\Final Project\Final Project\obj\Debug\Final_Project.AddCustomerForm.resources
+C:\Users\Lea\Google Drive\School\CS 292 C#\Assignments\Final Project\Final Project\obj\Debug\Final_Project.CustomerForm.resources
+C:\Users\Lea\Google Drive\School\CS 292 C#\Assignments\Final Project\Final Project\obj\Debug\Final_Project.UpdateCustomerForm.resources
