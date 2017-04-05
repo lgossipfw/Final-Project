@@ -16,5 +16,17 @@ namespace Final_Project
         {
             InitializeComponent();
         }
+
+        private void File_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UsersForm uf = new UsersForm();
+            uf.ShowDialog();
+        }
     }
 }

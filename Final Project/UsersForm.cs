@@ -12,6 +12,8 @@ namespace Final_Project
 {
     public partial class UsersForm : Form
     {
+        private int userID;
+
         public UsersForm()
         {
             InitializeComponent();
@@ -36,13 +38,6 @@ namespace Final_Project
             Application.Exit();
         }
 
-        private void btnAddNewUser_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AddUserForm auf = new AddUserForm();
-            auf.ShowDialog();
-        }
-
         private void btnSearchFor_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -52,7 +47,20 @@ namespace Final_Project
 
         private void btnUpdateAppointment_Click(object sender, EventArgs e)
         {
+            userID = int.Parse(txtUserID.Text);
+         
+            this.Hide();
+            UpdateUserForm uuf = new UpdateUserForm();
+            uuf.setUserID(userID);
+            uuf.Show();
+            
+        }
 
+        private void btnAddNewUser_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddUserForm auf = new AddUserForm();
+            auf.Show();
         }
     }
 }

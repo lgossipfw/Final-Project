@@ -45,5 +45,14 @@ namespace Final_Project
             af.ShowDialog();
         }
 
+        private void Users_ViewAll_Click(object sender, EventArgs e)
+        {
+            //TODO: Check permissions
+
+            this.Hide();
+            UsersForm uf = new UsersForm();
+            uf.ShowDialog();
+
+        }
     }
 }

@@ -71,14 +71,14 @@
             // File_Logout
             // 
             this.File_Logout.Name = "File_Logout";
-            this.File_Logout.Size = new System.Drawing.Size(211, 30);
+            this.File_Logout.Size = new System.Drawing.Size(154, 30);
             this.File_Logout.Text = "Logout";
             this.File_Logout.Click += new System.EventHandler(this.File_Logout_Click);
             // 
             // File_Exit
             // 
             this.File_Exit.Name = "File_Exit";
-            this.File_Exit.Size = new System.Drawing.Size(211, 30);
+            this.File_Exit.Size = new System.Drawing.Size(154, 30);
             this.File_Exit.Text = "Exit";
             this.File_Exit.Click += new System.EventHandler(this.File_Exit_Click);
             // 
@@ -108,7 +108,7 @@
             // Customers_ViewAll
             // 
             this.Customers_ViewAll.Name = "Customers_ViewAll";
-            this.Customers_ViewAll.Size = new System.Drawing.Size(211, 30);
+            this.Customers_ViewAll.Size = new System.Drawing.Size(159, 30);
             this.Customers_ViewAll.Text = "View All";
             this.Customers_ViewAll.Click += new System.EventHandler(this.Customers_ViewAll_Click);
             // 
@@ -125,6 +125,7 @@
             this.Users_ViewAll.Name = "Users_ViewAll";
             this.Users_ViewAll.Size = new System.Drawing.Size(211, 30);
             this.Users_ViewAll.Text = "View All";
+            this.Users_ViewAll.Click += new System.EventHandler(this.Users_ViewAll_Click);
             // 
             // dtpAppointmentsDate
             // 

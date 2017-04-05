@@ -31,11 +31,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtAppointmentID = new System.Windows.Forms.TextBox();
+            this.txtUserID = new System.Windows.Forms.TextBox();
             this.btnSearchFor = new System.Windows.Forms.Button();
-            this.btnUpdateAppointment = new System.Windows.Forms.Button();
-            this.btnDeleteAppointment = new System.Windows.Forms.Button();
-            this.btnAddNewAppointment = new System.Windows.Forms.Button();
+            this.btnUpdateUser = new System.Windows.Forms.Button();
+            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.btnAddNewUser = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,18 +66,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(697, 235);
+            this.label1.Location = new System.Drawing.Point(730, 235);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 20);
+            this.label1.Size = new System.Drawing.Size(95, 20);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Enter Username To:";
+            this.label1.Text = "Enter ID To:";
             // 
-            // txtAppointmentID
+            // txtUserID
             // 
-            this.txtAppointmentID.Location = new System.Drawing.Point(855, 229);
-            this.txtAppointmentID.Name = "txtAppointmentID";
-            this.txtAppointmentID.Size = new System.Drawing.Size(100, 26);
-            this.txtAppointmentID.TabIndex = 27;
+            this.txtUserID.Location = new System.Drawing.Point(831, 232);
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.Size = new System.Drawing.Size(100, 26);
+            this.txtUserID.TabIndex = 27;
             // 
             // btnSearchFor
             // 
@@ -89,33 +89,34 @@
             this.btnSearchFor.UseVisualStyleBackColor = true;
             this.btnSearchFor.Click += new System.EventHandler(this.btnSearchFor_Click);
             // 
-            // btnUpdateAppointment
+            // btnUpdateUser
             // 
-            this.btnUpdateAppointment.Location = new System.Drawing.Point(734, 290);
-            this.btnUpdateAppointment.Name = "btnUpdateAppointment";
-            this.btnUpdateAppointment.Size = new System.Drawing.Size(221, 34);
-            this.btnUpdateAppointment.TabIndex = 25;
-            this.btnUpdateAppointment.Text = "Update Existing";
-            this.btnUpdateAppointment.UseVisualStyleBackColor = true;
-            this.btnUpdateAppointment.Click += new System.EventHandler(this.btnUpdateAppointment_Click);
+            this.btnUpdateUser.Location = new System.Drawing.Point(734, 290);
+            this.btnUpdateUser.Name = "btnUpdateUser";
+            this.btnUpdateUser.Size = new System.Drawing.Size(221, 34);
+            this.btnUpdateUser.TabIndex = 25;
+            this.btnUpdateUser.Text = "Update Existing";
+            this.btnUpdateUser.UseVisualStyleBackColor = true;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateAppointment_Click);
             // 
-            // btnDeleteAppointment
+            // btnDeleteUser
             // 
-            this.btnDeleteAppointment.Location = new System.Drawing.Point(734, 346);
-            this.btnDeleteAppointment.Name = "btnDeleteAppointment";
-            this.btnDeleteAppointment.Size = new System.Drawing.Size(221, 36);
-            this.btnDeleteAppointment.TabIndex = 24;
-            this.btnDeleteAppointment.Text = "Delete";
-            this.btnDeleteAppointment.UseVisualStyleBackColor = true;
+            this.btnDeleteUser.Location = new System.Drawing.Point(734, 346);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(221, 36);
+            this.btnDeleteUser.TabIndex = 24;
+            this.btnDeleteUser.Text = "Delete";
+            this.btnDeleteUser.UseVisualStyleBackColor = true;
             // 
-            // btnAddNewAppointment
+            // btnAddNewUser
             // 
-            this.btnAddNewAppointment.Location = new System.Drawing.Point(734, 78);
-            this.btnAddNewAppointment.Name = "btnAddNewAppointment";
-            this.btnAddNewAppointment.Size = new System.Drawing.Size(221, 30);
-            this.btnAddNewAppointment.TabIndex = 23;
-            this.btnAddNewAppointment.Text = "Add New";
-            this.btnAddNewAppointment.UseVisualStyleBackColor = true;
+            this.btnAddNewUser.Location = new System.Drawing.Point(734, 78);
+            this.btnAddNewUser.Name = "btnAddNewUser";
+            this.btnAddNewUser.Size = new System.Drawing.Size(221, 30);
+            this.btnAddNewUser.TabIndex = 23;
+            this.btnAddNewUser.Text = "Add New";
+            this.btnAddNewUser.UseVisualStyleBackColor = true;
+            this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
             // 
             // dataGridView1
             // 
@@ -175,11 +176,11 @@
             this.ClientSize = new System.Drawing.Size(992, 479);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtAppointmentID);
+            this.Controls.Add(this.txtUserID);
             this.Controls.Add(this.btnSearchFor);
-            this.Controls.Add(this.btnUpdateAppointment);
-            this.Controls.Add(this.btnDeleteAppointment);
-            this.Controls.Add(this.btnAddNewAppointment);
+            this.Controls.Add(this.btnUpdateUser);
+            this.Controls.Add(this.btnDeleteUser);
+            this.Controls.Add(this.btnAddNewUser);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "UsersForm";
@@ -200,11 +201,11 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtAppointmentID;
+        private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.Button btnSearchFor;
-        private System.Windows.Forms.Button btnUpdateAppointment;
-        private System.Windows.Forms.Button btnDeleteAppointment;
-        private System.Windows.Forms.Button btnAddNewAppointment;
+        private System.Windows.Forms.Button btnUpdateUser;
+        private System.Windows.Forms.Button btnDeleteUser;
+        private System.Windows.Forms.Button btnAddNewUser;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
