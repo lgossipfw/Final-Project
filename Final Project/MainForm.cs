@@ -21,13 +21,13 @@ namespace Final_Project
         {
             this.Hide();
             LoginForm lf = new LoginForm();
-            lf.Closed += (s, args) => this.Close();
+            //lf.Closed += (s, args) => this.Close();
             lf.Show();
         }
 
         private void File_Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Customers_ViewAll_Click(object sender, EventArgs e)
@@ -37,5 +37,13 @@ namespace Final_Project
             //lf.Closed += (s, args) => this.Close();
             cf.Show();
         }
+
+        private void Appointments_ViewAll_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AppointmentForm af = new AppointmentForm();
+            af.ShowDialog();
+        }
+
     }
 }

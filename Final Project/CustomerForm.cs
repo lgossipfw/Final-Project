@@ -43,5 +43,24 @@ namespace Final_Project
             MainForm mf = new MainForm();
             mf.Show();
         }
+
+        private void File_Logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm lf = new LoginForm();
+            lf.ShowDialog();
+        }
+
+        private void File_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCustomerSearch_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CustomerSearchForm csf = new CustomerSearchForm();
+            csf.ShowDialog();
+        }
     }
 }

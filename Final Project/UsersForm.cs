@@ -10,11 +10,9 @@ using System.Windows.Forms;
 
 namespace Final_Project
 {
-    public partial class AppointmentForm : Form
+    public partial class UsersForm : Form
     {
-        private int appointmentID;
-
-        public AppointmentForm()
+        public UsersForm()
         {
             InitializeComponent();
         }
@@ -38,29 +36,23 @@ namespace Final_Project
             Application.Exit();
         }
 
-        private void btnAddNewAppointment_Click(object sender, EventArgs e)
+        private void btnAddNewUser_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddAppointmentForm aaf = new AddAppointmentForm();
-            aaf.ShowDialog();
-        }
-
-        private void btnUpdateAppointment_Click(object sender, EventArgs e)
-        {
-            appointmentID = int.Parse(txtAppointmentID.Text);
-
-            this.Hide();
-            UpdateAppointmentForm uaf = new UpdateAppointmentForm();
-            uaf.SetAppointmentID(appointmentID);
-            uaf.ShowDialog();
-
+            AddUserForm auf = new AddUserForm();
+            auf.ShowDialog();
         }
 
         private void btnSearchFor_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AppointmentSearchForm asf = new AppointmentSearchForm();
-            asf.ShowDialog();
+            UserSearchForm usf = new UserSearchForm();
+            usf.ShowDialog();
+        }
+
+        private void btnUpdateAppointment_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

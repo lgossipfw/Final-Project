@@ -10,18 +10,17 @@ using System.Windows.Forms;
 
 namespace Final_Project
 {
-    public partial class AddCustomerForm : Form
+    public partial class UpdateAppointmentForm : Form
     {
-        public AddCustomerForm()
+        private int appointmentID;
+
+        public UpdateAppointmentForm()
         {
             InitializeComponent();
         }
-
-        private void AddCustomer_Click(object sender, EventArgs e)
+        public void SetAppointmentID(int appID)
         {
-            this.Hide();
-            CustomerForm cf = new CustomerForm();
-            cf.Show();
+           appointmentID = appID;
         }
 
         private void File_Exit_Click(object sender, EventArgs e)
@@ -32,8 +31,13 @@ namespace Final_Project
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CustomerForm cf = new CustomerForm();
-            cf.Show();
+            AppointmentForm af = new AppointmentForm();
+            af.ShowDialog();
+        }
+
+        private void UpdateAppointmentForm_Load(object sender, EventArgs e)
+        {
+            lblappID.Text = appointmentID.ToString();
         }
     }
 }

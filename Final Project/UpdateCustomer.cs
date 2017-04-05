@@ -31,5 +31,29 @@ namespace Final_Project
             lblID.Text = customerID.ToString();
 
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txtCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CustomerForm cf = new CustomerForm();
+            cf.ShowDialog();
+            
+        }
+
+        private void txtUpdate_Click(object sender, EventArgs e)
+        {
+
+
+
+
+            this.Hide();
+            CustomerForm cf = new CustomerForm();
+            cf.ShowDialog();
+        }
     }
 }

@@ -10,21 +10,20 @@ using System.Windows.Forms;
 
 namespace Final_Project
 {
-    public partial class LoginForm : Form
+    public partial class CustomerSearchForm : Form
     {
-        public LoginForm()
+        public CustomerSearchForm()
         {
             InitializeComponent();
-            
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            MainForm mf = new MainForm();
-            mf.Show();
-           // mf.Closed += (s, args) => this.Close();
-            this.Hide();
 
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CustomerForm cf = new CustomerForm();
+            cf.ShowDialog();
         }
 
         private void File_Exit_Click(object sender, EventArgs e)

@@ -10,21 +10,18 @@ using System.Windows.Forms;
 
 namespace Final_Project
 {
-    public partial class LoginForm : Form
+    public partial class AddAppointmentForm : Form
     {
-        public LoginForm()
+        public AddAppointmentForm()
         {
             InitializeComponent();
-            
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            MainForm mf = new MainForm();
-            mf.Show();
-           // mf.Closed += (s, args) => this.Close();
             this.Hide();
-
+            AppointmentForm af = new AppointmentForm();
+            af.ShowDialog();
         }
 
         private void File_Exit_Click(object sender, EventArgs e)
