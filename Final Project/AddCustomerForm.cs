@@ -17,12 +17,6 @@ namespace Final_Project
             InitializeComponent();
         }
 
-        private void AddCustomer_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CustomerForm cf = new CustomerForm();
-            cf.Show();
-        }
 
         private void File_Exit_Click(object sender, EventArgs e)
         {
@@ -30,6 +24,13 @@ namespace Final_Project
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CustomerForm cf = new CustomerForm();
+            cf.Show();
+        }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             this.Hide();
             CustomerForm cf = new CustomerForm();

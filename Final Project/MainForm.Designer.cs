@@ -41,8 +41,11 @@
             this.dtpAppointmentsDate = new System.Windows.Forms.DateTimePicker();
             this.dgvSchedule = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -123,13 +126,13 @@
             // Users_ViewAll
             // 
             this.Users_ViewAll.Name = "Users_ViewAll";
-            this.Users_ViewAll.Size = new System.Drawing.Size(211, 30);
+            this.Users_ViewAll.Size = new System.Drawing.Size(159, 30);
             this.Users_ViewAll.Text = "View All";
             this.Users_ViewAll.Click += new System.EventHandler(this.Users_ViewAll_Click);
             // 
             // dtpAppointmentsDate
             // 
-            this.dtpAppointmentsDate.Location = new System.Drawing.Point(669, 129);
+            this.dtpAppointmentsDate.Location = new System.Drawing.Point(669, 104);
             this.dtpAppointmentsDate.Name = "dtpAppointmentsDate";
             this.dtpAppointmentsDate.Size = new System.Drawing.Size(200, 26);
             this.dtpAppointmentsDate.TabIndex = 2;
@@ -137,7 +140,7 @@
             // dgvSchedule
             // 
             this.dgvSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSchedule.Location = new System.Drawing.Point(12, 89);
+            this.dgvSchedule.Location = new System.Drawing.Point(12, 64);
             this.dgvSchedule.Name = "dgvSchedule";
             this.dgvSchedule.RowTemplate.Height = 28;
             this.dgvSchedule.Size = new System.Drawing.Size(590, 378);
@@ -146,17 +149,34 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(664, 89);
+            this.label1.Location = new System.Drawing.Point(664, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "View Schedule For the Day:";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 457);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(992, 22);
+            this.statusStrip1.TabIndex = 5;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 17);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 479);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvSchedule);
             this.Controls.Add(this.dtpAppointmentsDate);
@@ -168,6 +188,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +210,7 @@
         private System.Windows.Forms.DataGridView dgvSchedule;
         private System.Windows.Forms.ToolStripMenuItem Customers_ViewAll;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
     }
 }

@@ -34,11 +34,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtUpdate = new System.Windows.Forms.Button();
-            this.txtCancel = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblID = new System.Windows.Forms.Label();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -94,15 +94,15 @@
             this.txtUpdate.UseVisualStyleBackColor = true;
             this.txtUpdate.Click += new System.EventHandler(this.txtUpdate_Click);
             // 
-            // txtCancel
+            // btnCancel
             // 
-            this.txtCancel.Location = new System.Drawing.Point(327, 357);
-            this.txtCancel.Name = "txtCancel";
-            this.txtCancel.Size = new System.Drawing.Size(115, 39);
-            this.txtCancel.TabIndex = 42;
-            this.txtCancel.Text = "Cancel";
-            this.txtCancel.UseVisualStyleBackColor = true;
-            this.txtCancel.Click += new System.EventHandler(this.txtCancel_Click);
+            this.btnCancel.Location = new System.Drawing.Point(327, 357);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(115, 39);
+            this.btnCancel.TabIndex = 42;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // menuStrip1
             // 
@@ -123,6 +123,13 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(124, 30);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // lblID
             // 
             this.lblID.AutoSize = true;
@@ -130,13 +137,6 @@
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(0, 20);
             this.lblID.TabIndex = 46;
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -292,7 +292,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.txtCancel);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtUpdate);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -316,7 +316,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.Button txtUpdate;
-        private System.Windows.Forms.Button txtCancel;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.Label lblID;

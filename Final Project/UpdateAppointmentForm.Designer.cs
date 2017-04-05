@@ -30,14 +30,12 @@
         {
             this.btnAddAppointment = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtCustID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboAppReason = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -47,8 +45,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblAppointmentID = new System.Windows.Forms.Label();
             this.lblappID = new System.Windows.Forms.Label();
-            this.statusStrip1.SuspendLayout();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddAppointment
@@ -69,22 +69,6 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 457);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(992, 22);
-            this.statusStrip1.TabIndex = 21;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(0, 17);
             // 
             // txtCustID
             // 
@@ -131,17 +115,17 @@
             this.dtpTime.TabIndex = 16;
             this.dtpTime.Value = new System.DateTime(2017, 4, 4, 14, 22, 0, 0);
             // 
-            // comboBox1
+            // cboAppReason
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboAppReason.FormattingEnabled = true;
+            this.cboAppReason.Items.AddRange(new object[] {
             "Intake",
             "Consultation",
             "Urgent"});
-            this.comboBox1.Location = new System.Drawing.Point(185, 225);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 15;
+            this.cboAppReason.Location = new System.Drawing.Point(185, 225);
+            this.cboAppReason.Name = "cboAppReason";
+            this.cboAppReason.Size = new System.Drawing.Size(121, 28);
+            this.cboAppReason.TabIndex = 15;
             // 
             // label2
             // 
@@ -220,34 +204,50 @@
             this.lblappID.Size = new System.Drawing.Size(0, 20);
             this.lblappID.TabIndex = 50;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 457);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(992, 22);
+            this.statusStrip1.TabIndex = 51;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 17);
+            // 
             // UpdateAppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 479);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblappID);
             this.Controls.Add(this.lblAppointmentID);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnAddAppointment);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.txtCustID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.dtpTime);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboAppReason);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "UpdateAppointmentForm";
             this.Text = "UpdateAppointmentForm";
             this.Load += new System.EventHandler(this.UpdateAppointmentForm_Load);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,14 +257,12 @@
 
         private System.Windows.Forms.Button btnAddAppointment;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.TextBox txtCustID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.DateTimePicker dtpTime;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboAppReason;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -274,5 +272,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblAppointmentID;
         private System.Windows.Forms.Label lblappID;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
     }
 }

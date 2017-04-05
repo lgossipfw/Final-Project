@@ -37,13 +37,6 @@ namespace Final_Project
             Application.Exit();
         }
 
-        private void txtCancel_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CustomerForm cf = new CustomerForm();
-            cf.ShowDialog();
-            
-        }
 
         private void txtUpdate_Click(object sender, EventArgs e)
         {
@@ -51,6 +44,13 @@ namespace Final_Project
 
 
 
+            this.Hide();
+            CustomerForm cf = new CustomerForm();
+            cf.ShowDialog();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
             this.Hide();
             CustomerForm cf = new CustomerForm();
             cf.ShowDialog();

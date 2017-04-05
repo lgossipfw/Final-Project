@@ -39,18 +39,18 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.AddCustomer = new System.Windows.Forms.Button();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.txtState = new System.Windows.Forms.MaskedTextBox();
+            this.btnAddCustomer = new System.Windows.Forms.Button();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtZipCode = new System.Windows.Forms.MaskedTextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -95,7 +95,7 @@
             // File_Exit
             // 
             this.File_Exit.Name = "File_Exit";
-            this.File_Exit.Size = new System.Drawing.Size(211, 30);
+            this.File_Exit.Size = new System.Drawing.Size(124, 30);
             this.File_Exit.Text = "Exit";
             this.File_Exit.Click += new System.EventHandler(this.File_Exit_Click);
             // 
@@ -153,91 +153,75 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Email:";
             // 
-            // textBox1
+            // txtFirstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(137, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 26);
-            this.textBox1.TabIndex = 10;
+            this.txtFirstName.Location = new System.Drawing.Point(137, 60);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(242, 26);
+            this.txtFirstName.TabIndex = 10;
             // 
-            // textBox2
+            // txtLastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(138, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(241, 26);
-            this.textBox2.TabIndex = 11;
+            this.txtLastName.Location = new System.Drawing.Point(138, 121);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(241, 26);
+            this.txtLastName.TabIndex = 11;
             // 
-            // textBox4
+            // txtAddress
             // 
-            this.textBox4.Location = new System.Drawing.Point(137, 230);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(242, 26);
-            this.textBox4.TabIndex = 13;
+            this.txtAddress.Location = new System.Drawing.Point(137, 230);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(242, 26);
+            this.txtAddress.TabIndex = 13;
             // 
-            // maskedTextBox1
+            // txtPhoneNumber
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(138, 176);
-            this.maskedTextBox1.Mask = "(999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(124, 26);
-            this.maskedTextBox1.TabIndex = 14;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(138, 176);
+            this.txtPhoneNumber.Mask = "(999) 000-0000";
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(124, 26);
+            this.txtPhoneNumber.TabIndex = 14;
             // 
-            // maskedTextBox2
+            // txtState
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(525, 118);
-            this.maskedTextBox2.Mask = "AA";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(36, 26);
-            this.maskedTextBox2.TabIndex = 15;
+            this.txtState.Location = new System.Drawing.Point(525, 118);
+            this.txtState.Mask = "AA";
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(36, 26);
+            this.txtState.TabIndex = 15;
             // 
-            // AddCustomer
+            // btnAddCustomer
             // 
-            this.AddCustomer.Location = new System.Drawing.Point(525, 305);
-            this.AddCustomer.Name = "AddCustomer";
-            this.AddCustomer.Size = new System.Drawing.Size(175, 37);
-            this.AddCustomer.TabIndex = 16;
-            this.AddCustomer.Text = "Add Customer";
-            this.AddCustomer.UseVisualStyleBackColor = true;
-            this.AddCustomer.Click += new System.EventHandler(this.AddCustomer_Click);
+            this.btnAddCustomer.Location = new System.Drawing.Point(525, 305);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(175, 37);
+            this.btnAddCustomer.TabIndex = 16;
+            this.btnAddCustomer.Text = "Add Customer";
+            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
-            // statusStrip1
+            // txtCity
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 372);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(972, 22);
-            this.statusStrip1.TabIndex = 18;
-            this.statusStrip1.Text = "statusStrip1";
+            this.txtCity.Location = new System.Drawing.Point(526, 56);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(240, 26);
+            this.txtCity.TabIndex = 19;
             // 
-            // lblStatus
+            // txtZipCode
             // 
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(0, 17);
+            this.txtZipCode.Location = new System.Drawing.Point(525, 176);
+            this.txtZipCode.Mask = "00000";
+            this.txtZipCode.Name = "txtZipCode";
+            this.txtZipCode.Size = new System.Drawing.Size(53, 26);
+            this.txtZipCode.TabIndex = 20;
+            this.txtZipCode.ValidatingType = typeof(int);
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(526, 56);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(240, 26);
-            this.textBox3.TabIndex = 19;
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(525, 176);
-            this.maskedTextBox3.Mask = "00000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(53, 26);
-            this.maskedTextBox3.TabIndex = 20;
-            this.maskedTextBox3.ValidatingType = typeof(int);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(525, 226);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(241, 26);
-            this.textBox5.TabIndex = 21;
+            this.txtEmail.Location = new System.Drawing.Point(525, 226);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(241, 26);
+            this.txtEmail.TabIndex = 21;
             // 
             // btnCancel
             // 
@@ -249,22 +233,38 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 372);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(972, 22);
+            this.statusStrip1.TabIndex = 23;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 17);
+            // 
             // AddCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 394);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.AddCustomer);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtZipCode);
+            this.Controls.Add(this.txtCity);
+            this.Controls.Add(this.btnAddCustomer);
+            this.Controls.Add(this.txtState);
+            this.Controls.Add(this.txtPhoneNumber);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -299,17 +299,17 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.Button AddCustomer;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.MaskedTextBox txtPhoneNumber;
+        private System.Windows.Forms.MaskedTextBox txtState;
+        private System.Windows.Forms.Button btnAddCustomer;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.MaskedTextBox txtZipCode;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button btnCancel;
     }
 }
