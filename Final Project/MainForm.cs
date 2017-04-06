@@ -16,6 +16,8 @@ namespace Final_Project
         {
             InitializeComponent();
         }
+        businessDataSetTableAdapters.SessionPermissionTableAdapter adapter
+       = new businessDataSetTableAdapters.SessionPermissionTableAdapter();
 
         private void File_Logout_Click(object sender, EventArgs e)
         {
@@ -48,10 +50,24 @@ namespace Final_Project
         private void Users_ViewAll_Click(object sender, EventArgs e)
         {
             //TODO: Check permissions
+            businessDataSet.SessionPermissionDataTable table;
+            table = adapter.GetData();
 
-            this.Hide();
-            UsersForm uf = new UsersForm();
-            uf.ShowDialog();
+
+            int i = Convert.ToInt32(table.Rows[0]["Permission"]);
+            MessageBox.Show("Permission Level: " + i);
+            if(i == 1)
+            {
+                this.Hide();
+                UsersForm uf = new UsersForm();
+                uf.ShowDialog();
+            }
+            else
+            {
+                lblStatus.Text = "You do not have permission to enter this area";
+                return;
+            }
+           
 
         }
     }

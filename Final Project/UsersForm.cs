@@ -14,6 +14,11 @@ namespace Final_Project
     {
         private int userID;
 
+        //businessDSTableAdapters.UsersTableAdapter adapter = new businessDSTableAdapters.UsersTableAdapter();
+        businessDataSetTableAdapters.UsersTableAdapter adapter =
+            new businessDataSetTableAdapters.UsersTableAdapter();
+        DataSet ds = new DataSet();
+
         public UsersForm()
         {
             InitializeComponent();
@@ -61,6 +66,17 @@ namespace Final_Project
             this.Hide();
             AddUserForm auf = new AddUserForm();
             auf.Show();
+        }
+
+        private void UsersForm_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+           // adapter.Delete(int.Parse(txtUserID.Text));
+          
         }
     }
 }
