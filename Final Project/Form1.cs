@@ -31,8 +31,8 @@ namespace Final_Project
 
             userAdapter.Fill(userTable);
             //Check database for valid credentials
-            string username = "User1";
-            string password = "derp";
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
 
             foreach (DataRow row in userTable.Rows)
             {
@@ -61,22 +61,6 @@ namespace Final_Project
 
                 }
             }
-
-
-
-          
-
-          
-            //int i = -1;
-            //adapter.UpdateQuery(7);
-
-            //businessDataSet.SessionPermissionDataTable table;
-            //table = adapter.GetData();
-             
-          
-            //i = Convert.ToInt32(table.Rows[0]["Permission"]);
-            //MessageBox.Show(i + "");
-
         }
 
         private void File_Exit_Click(object sender, EventArgs e)
@@ -87,7 +71,7 @@ namespace Final_Project
         private void LoginForm_Load(object sender, EventArgs e)
         {
             //Everytime this form loads, write the permissions level of the
-            //first record of the SessionPermission to -1 or 0
+            //first record of the SessionPermission to 0
             adapter.UpdateQuery(0);
         }
     }
