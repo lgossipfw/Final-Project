@@ -277,6 +277,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AddCustomerForm";
             this.Text = "Add Customer";
+            this.Load += new System.EventHandler(this.AddCustomerForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

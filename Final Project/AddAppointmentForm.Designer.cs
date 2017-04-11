@@ -112,7 +112,7 @@
             this.dtpTime.ShowUpDown = true;
             this.dtpTime.Size = new System.Drawing.Size(203, 26);
             this.dtpTime.TabIndex = 4;
-            this.dtpTime.Value = new System.DateTime(2017, 4, 4, 14, 22, 0, 0);
+            this.dtpTime.Value = new System.DateTime(2017, 4, 8, 14, 22, 0, 0);
             // 
             // dtpDate
             // 
@@ -166,6 +166,7 @@
             this.btnAddAppointment.TabIndex = 11;
             this.btnAddAppointment.Text = "Add Appointment";
             this.btnAddAppointment.UseVisualStyleBackColor = true;
+            this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
             // 
             // statusStrip1
             // 

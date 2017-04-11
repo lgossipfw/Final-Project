@@ -53,8 +53,8 @@ namespace Final_Project
                     }
 
                     MessageBox.Show("success");
-                    MainForm mf = new MainForm();
-                    mf.Show();
+                    MainForm frmMain = new MainForm();
+                    frmMain.ShowDialog();
                     this.Hide();
                     //Break Out of checking users
                     break;

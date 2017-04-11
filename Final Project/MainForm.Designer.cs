@@ -134,8 +134,9 @@
             // 
             this.dtpAppointmentsDate.Location = new System.Drawing.Point(669, 104);
             this.dtpAppointmentsDate.Name = "dtpAppointmentsDate";
-            this.dtpAppointmentsDate.Size = new System.Drawing.Size(200, 26);
+            this.dtpAppointmentsDate.Size = new System.Drawing.Size(283, 26);
             this.dtpAppointmentsDate.TabIndex = 2;
+            this.dtpAppointmentsDate.ValueChanged += new System.EventHandler(this.dtpAppointmentsDate_ValueChanged);
             // 
             // dgvSchedule
             // 
@@ -185,6 +186,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).EndInit();

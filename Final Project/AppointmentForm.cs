@@ -19,6 +19,8 @@ namespace Final_Project
             InitializeComponent();
         }
 
+        businessDataSetTableAdapters.AppointmentsTableAdapter adapter;
+
         private void File_Home_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -61,6 +63,15 @@ namespace Final_Project
             this.Hide();
             AppointmentSearchForm asf = new AppointmentSearchForm();
             asf.ShowDialog();
+        }
+
+        private void AppointmentForm_Load(object sender, EventArgs e)
+        {
+            adapter = new businessDataSetTableAdapters.AppointmentsTableAdapter();
+
+            dgvAppointments.DataSource = adapter.GetData();
+
+
         }
     }
 }

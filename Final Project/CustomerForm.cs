@@ -19,11 +19,12 @@ namespace Final_Project
             InitializeComponent();
         }
 
+        businessDataSetTableAdapters.CustomersTableAdapter adapter;
+
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
             this.Hide();
             AddCustomerForm acf = new AddCustomerForm();
-            //lf.Closed += (s, args) => this.Close();
             acf.Show();
         }
 
@@ -61,6 +62,36 @@ namespace Final_Project
             this.Hide();
             CustomerSearchForm csf = new CustomerSearchForm();
             csf.ShowDialog();
+        }
+
+        private void Customers_CreateReport_Click(object sender, EventArgs e)
+        {
+            //Loop through all customers and compare last appointment date to 6 months before current date
+            DateTime currentDate = DateTime.Today;
+            DateTime compareDate = currentDate.AddMonths(-6);
+
+            //Check that the customer has a last appointment date not null
+
+            //Compare times
+            String lastAppDateString = "9/8/2016";
+            String lastAppDate2String = "2/14/2017";
+            DateTime lastAppDate = Convert.ToDateTime(lastAppDate2String);
+            int i = (int)(lastAppDate - DateTime.Now).TotalDays;
+            i = i * -1;
+            MessageBox.Show("Total days: " +i);
+            if (((lastAppDate - DateTime.Now).TotalDays *-1)  > 183) 
+            {
+
+            }
+
+
+        }
+
+        private void CustomerForm_Load(object sender, EventArgs e)
+        {
+            adapter = new businessDataSetTableAdapters.CustomersTableAdapter();
+
+            dgvCustomers.DataSource = adapter.GetData();
         }
     }
 }

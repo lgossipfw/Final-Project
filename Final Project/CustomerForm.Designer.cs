@@ -103,8 +103,9 @@
             // Customers_CreateReport
             // 
             this.Customers_CreateReport.Name = "Customers_CreateReport";
-            this.Customers_CreateReport.Size = new System.Drawing.Size(211, 30);
+            this.Customers_CreateReport.Size = new System.Drawing.Size(205, 30);
             this.Customers_CreateReport.Text = "Create Report";
+            this.Customers_CreateReport.Click += new System.EventHandler(this.Customers_CreateReport_Click);
             // 
             // btnCustomerSearch
             // 
@@ -203,6 +204,7 @@
             this.Name = "CustomerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customers";
+            this.Load += new System.EventHandler(this.CustomerForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();

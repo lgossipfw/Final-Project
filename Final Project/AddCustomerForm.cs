@@ -17,6 +17,7 @@ namespace Final_Project
             InitializeComponent();
         }
 
+        businessDataSetTableAdapters.CustomersTableAdapter adapter;
 
         private void File_Exit_Click(object sender, EventArgs e)
         {
@@ -32,9 +33,29 @@ namespace Final_Project
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
+            //add customer
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            string phoneNumber = txtPhoneNumber.Text;
+            string address = txtAddress.Text;
+            string city = txtCity.Text;
+            string state = txtState.Text;
+            string zipCode = txtZipCode.Text;
+            string email = txtEmail.Text;
+            
+            adapter.Insert(firstName,lastName,phoneNumber,address,city,state,zipCode,email);
+
+
+
+
             this.Hide();
             CustomerForm cf = new CustomerForm();
-            cf.Show();
+            cf.ShowDialog();
+        }
+
+        private void AddCustomerForm_Load(object sender, EventArgs e)
+        {
+            adapter = new businessDataSetTableAdapters.CustomersTableAdapter();
         }
     }
 }
