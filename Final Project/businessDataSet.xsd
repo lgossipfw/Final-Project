@@ -304,7 +304,16 @@ SELECT AppointmentID, CustomerID, AppointmentReason, Date FROM Appointments WHER
               <Mapping SourceColumn="AppointmentReason" DataSetColumn="AppointmentReason" />
               <Mapping SourceColumn="Date" DataSetColumn="Date" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="businessConnectionString (Settings)" DbObjectName="dbo.Appointments" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetDataBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AppointmentID, AppointmentReason, CustomerID, Date FROM Appointments WHERE (CAST(Date AS DATE) = CAST(GETDATE() AS DATE)) ORDER BY Date</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -428,7 +437,7 @@ SELECT AppointmentID, CustomerID, AppointmentReason, Date FROM Appointments WHER
               <xs:element name="AppointmentReason" msprop:Generator_ColumnVarNameInTable="columnAppointmentReason" msprop:Generator_ColumnPropNameInRow="AppointmentReason" msprop:Generator_ColumnPropNameInTable="AppointmentReasonColumn" msprop:Generator_UserColumnName="AppointmentReason">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
+                    <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

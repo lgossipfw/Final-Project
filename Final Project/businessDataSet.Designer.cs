@@ -1551,7 +1551,7 @@ namespace Final_Project {
                 this.columnAppointmentID.Unique = true;
                 this.columnCustomerID.AllowDBNull = false;
                 this.columnAppointmentReason.AllowDBNull = false;
-                this.columnAppointmentReason.MaxLength = 10;
+                this.columnAppointmentReason.MaxLength = 20;
                 this.columnDate.AllowDBNull = false;
             }
             
@@ -3786,11 +3786,16 @@ SELECT AppointmentID, CustomerID, AppointmentReason, Date FROM Appointments WHER
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT AppointmentID, CustomerID, AppointmentReason, Date FROM dbo.Appointments";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT AppointmentID, AppointmentReason, CustomerID, Date FROM Appointments WHERE" +
+                " (CAST(Date AS DATE) = CAST(GETDATE() AS DATE)) ORDER BY Date";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3812,6 +3817,17 @@ SELECT AppointmentID, CustomerID, AppointmentReason, Date FROM Appointments WHER
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual businessDataSet.AppointmentsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            businessDataSet.AppointmentsDataTable dataTable = new businessDataSet.AppointmentsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual businessDataSet.AppointmentsDataTable GetDataBy() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             businessDataSet.AppointmentsDataTable dataTable = new businessDataSet.AppointmentsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

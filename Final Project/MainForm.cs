@@ -19,6 +19,9 @@ namespace Final_Project
         businessDataSetTableAdapters.SessionPermissionTableAdapter adapter
        = new businessDataSetTableAdapters.SessionPermissionTableAdapter();
 
+        businessDataSetTableAdapters.AppointmentsTableAdapter appointmentAdapter =
+            new businessDataSetTableAdapters.AppointmentsTableAdapter();
+
         private void File_Logout_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -79,7 +82,14 @@ namespace Final_Project
             //Compare if equal to Today's date
             //.Compare method
 
-            
+            businessDataSet bDataSet = new businessDataSet();
+            businessDataSetTableAdapters.AppointmentsTableAdapter appointmentAdapter =
+                new businessDataSetTableAdapters.AppointmentsTableAdapter();
+            bDataSet.Clear();
+            appointmentAdapter.Fill(bDataSet.Appointments);
+            dgvSchedule.DataSource = appointmentAdapter.GetDataBy();
+
+
         }
 
         private void dtpAppointmentsDate_ValueChanged(object sender, EventArgs e)
