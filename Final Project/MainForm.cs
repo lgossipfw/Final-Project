@@ -76,25 +76,28 @@ namespace Final_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //Load today's schedule
-            //Use foreach loop to go through Appointments table
-            //Convert date field to DateTime
-            //Compare if equal to Today's date
-            //.Compare method
 
             businessDataSet bDataSet = new businessDataSet();
             businessDataSetTableAdapters.AppointmentsTableAdapter appointmentAdapter =
                 new businessDataSetTableAdapters.AppointmentsTableAdapter();
             bDataSet.Clear();
             appointmentAdapter.Fill(bDataSet.Appointments);
-            dgvSchedule.DataSource = appointmentAdapter.GetDataBy();
+            dgvSchedule.DataSource = appointmentAdapter.TodaysAppointments();
 
 
         }
 
         private void dtpAppointmentsDate_ValueChanged(object sender, EventArgs e)
         {
-            //Compare dates for current entry
+            DateTime sDate = dtpAppointmentsDate.Value.Date;
+            string selectedDate = sDate.ToString();
+
+            businessDataSet bDataSet = new businessDataSet();
+            businessDataSetTableAdapters.AppointmentsTableAdapter appointmentAdapter =
+                new businessDataSetTableAdapters.AppointmentsTableAdapter();
+            bDataSet.Clear();
+            appointmentAdapter.Fill(bDataSet.Appointments);
+            dgvSchedule.DataSource = appointmentAdapter.GetSelectedDateAppointments(selectedDate);
         }
     }
 }
