@@ -51,7 +51,7 @@ namespace Final_Project
                 return;
             }
      
-            //Check each row in users table
+            //Check each data row
             foreach (DataRow row in userTable.Rows)
             {
                 //Get permission level from row

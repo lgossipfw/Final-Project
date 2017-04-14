@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Final_Project
 {
@@ -19,7 +20,7 @@ namespace Final_Project
             InitializeComponent();
         }
 
-        businessDataSetTableAdapters.CustomersTableAdapter adapter;
+        businessDataSetTableAdapters.CustomersTableAdapter customerAdapter;
 
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
@@ -66,32 +67,57 @@ namespace Final_Project
 
         private void Customers_CreateReport_Click(object sender, EventArgs e)
         {
-            //Loop through all customers and compare last appointment date to 6 months before current date
-            DateTime currentDate = DateTime.Today;
-            DateTime compareDate = currentDate.AddMonths(-6);
 
-            //Check that the customer has a last appointment date not null
+            lblStatus.Text = "";
+            StreamWriter outputFile;
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text | *.txt";
 
-            //Compare times
-            String lastAppDateString = "9/8/2016";
-            String lastAppDate2String = "2/14/2017";
-            DateTime lastAppDate = Convert.ToDateTime(lastAppDate2String);
-            int i = (int)(lastAppDate - DateTime.Now).TotalDays;
-            i = i * -1;
-            MessageBox.Show("Total days: " +i);
-            if (((lastAppDate - DateTime.Now).TotalDays *-1)  > 183) 
+            businessDataSet bDataSet = new businessDataSet();
+            customerAdapter = new businessDataSetTableAdapters.CustomersTableAdapter();
+            bDataSet.Clear();
+            customerAdapter.Fill(bDataSet.Customers);
+            DataTable dt = new DataTable();
+            dt = customerAdapter.SixMonths();
+            string line = "";
+
+            foreach (DataRow row in dt.Rows)
             {
+                //Get first name 
+                string firstName = row.Field<string>("FirstName");
+                //Get last name
+                string lastName = row.Field<string>("LastName");
+                string phoneNumber = row.Field<string>("PhoneNumber");
+                string email = row.Field<string>("Email");
+                line += firstName + " " + lastName + Environment.NewLine +
+                  "     " + phoneNumber + " " + email + Environment.NewLine;
+
 
             }
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                outputFile = File.CreateText(saveFileDialog.FileName);
+
+                outputFile.WriteLine("Customers To Be Contacted");
+                outputFile.WriteLine("The following customers have not been seen in 6 months:");
+                outputFile.WriteLine("-------------------------------------------------------");
+                outputFile.WriteLine("");
+                outputFile.WriteLine(line);
+
+                outputFile.Close();
+            }
+
+
+
 
 
         }
 
         private void CustomerForm_Load(object sender, EventArgs e)
         {
-            adapter = new businessDataSetTableAdapters.CustomersTableAdapter();
+            customerAdapter = new businessDataSetTableAdapters.CustomersTableAdapter();
 
-            dgvCustomers.DataSource = adapter.GetData();
+            dgvCustomers.DataSource = customerAdapter.GetData();
         }
     }
 }

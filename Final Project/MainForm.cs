@@ -39,7 +39,6 @@ namespace Final_Project
         {
             this.Hide();
             CustomerForm cf = new CustomerForm();
-            //lf.Closed += (s, args) => this.Close();
             cf.Show();
         }
 
@@ -76,6 +75,11 @@ namespace Final_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //When form loads need to update the customer table to see if
+            //a next appoint needs to become a last appointment. See if they 
+            //need to be moved using one day before current date
+
+
 
             businessDataSet bDataSet = new businessDataSet();
             businessDataSetTableAdapters.AppointmentsTableAdapter appointmentAdapter =
@@ -83,7 +87,7 @@ namespace Final_Project
             bDataSet.Clear();
             appointmentAdapter.Fill(bDataSet.Appointments);
             dgvSchedule.DataSource = appointmentAdapter.TodaysAppointments();
-
+            
 
         }
 
