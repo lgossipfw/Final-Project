@@ -17,6 +17,8 @@ namespace Final_Project
             InitializeComponent();
         }
 
+        businessDataSetTableAdapters.CustomersTableAdapter customerAdapter =
+                new businessDataSetTableAdapters.CustomersTableAdapter();
 
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -29,6 +31,35 @@ namespace Final_Project
         private void File_Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            //Determine which radio button is checked
+            //Validate input for that radio button
+            //Run query
+            //Fill dgv
+
+            if (radCustID.Checked == true)
+            {
+                //
+                int customerID = int.Parse(txtSearchInput.Text);
+
+                dgvCustomers.DataSource = customerAdapter.FindByCustID(customerID);
+            }
+            else if(radFirstName.Checked == true)
+            {
+
+            }
+            else if(radLastName.Checked == true)
+            {
+
+            }
+            else if(radCity.Checked == true)
+            {
+
+            }
+            
         }
     }
 }

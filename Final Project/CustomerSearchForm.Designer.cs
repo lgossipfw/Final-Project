@@ -127,7 +127,7 @@
             // File_Exit
             // 
             this.File_Exit.Name = "File_Exit";
-            this.File_Exit.Size = new System.Drawing.Size(211, 30);
+            this.File_Exit.Size = new System.Drawing.Size(124, 30);
             this.File_Exit.Text = "Exit";
             this.File_Exit.Click += new System.EventHandler(this.File_Exit_Click);
             // 
@@ -139,6 +139,7 @@
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnCancel
             // 

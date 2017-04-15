@@ -15,6 +15,9 @@ namespace Final_Project
     {
         private int customerID;
 
+        businessDataSetTableAdapters.CustomersTableAdapter customerAdapter =
+            new businessDataSetTableAdapters.CustomersTableAdapter();
+
         public UpdateCustomerForm()
         {
             InitializeComponent();
@@ -29,6 +32,27 @@ namespace Final_Project
         private void UpdateCustomerForm_Load(object sender, EventArgs e)
         {
             lblID.Text = customerID.ToString();
+
+            //Load Data into fields on form
+
+            //Declare employee table
+            businessDataSet.CustomersDataTable customerTable;
+            //Fill table with employee data
+            customerTable = customerAdapter.GetData();
+            //Declare employee dataset row
+            businessDataSet.CustomersRow row;
+            //Set row equal to employee with matching employeeID
+            row = customerTable.FindByCustomerID(customerID);
+            //Set fields to existing data
+            txtFirstName.Text = row.FirstName;
+            txtLastName.Text = row.LastName;
+            txtPhoneNumber.Text = row.PhoneNumber;
+            txtAddress.Text = row.Address;
+            txtCity.Text = row.City;
+            txtState.Text = row.State;
+            txtZipCode.Text = row.ZipCode;
+            txtEmail.Text = row.Email;
+
 
         }
 

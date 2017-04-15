@@ -19,15 +19,17 @@ namespace Final_Project
         businessDataSetTableAdapters.SessionPermissionTableAdapter adapter
        = new businessDataSetTableAdapters.SessionPermissionTableAdapter();
 
-        businessDataSetTableAdapters.AppointmentsTableAdapter appointmentAdapter =
-            new businessDataSetTableAdapters.AppointmentsTableAdapter();
+        businessDataSetTableAdapters.AppointmentsTableAdapter appointmentAdapter
+            = new businessDataSetTableAdapters.AppointmentsTableAdapter();
+
+        businessDataSetTableAdapters.CustomersTableAdapter customerAdapter =
+          new businessDataSetTableAdapters.CustomersTableAdapter();
 
         private void File_Logout_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LoginForm lf = new LoginForm();
-            //lf.Closed += (s, args) => this.Close();
-            lf.Show();
+            LoginForm frmLogin = new LoginForm();
+            frmLogin.ShowDialog();
         }
 
         private void File_Exit_Click(object sender, EventArgs e)
@@ -38,15 +40,15 @@ namespace Final_Project
         private void Customers_ViewAll_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CustomerForm cf = new CustomerForm();
-            cf.Show();
+            CustomerForm frmCustomers = new CustomerForm();
+            frmCustomers.ShowDialog();
         }
 
         private void Appointments_ViewAll_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AppointmentForm af = new AppointmentForm();
-            af.ShowDialog();
+            AppointmentForm frmAppointments = new AppointmentForm();
+            frmAppointments.ShowDialog();
         }
 
         private void Users_ViewAll_Click(object sender, EventArgs e)
@@ -75,15 +77,12 @@ namespace Final_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //When form loads need to update the customer table to see if
-            //a next appoint needs to become a last appointment. See if they 
-            //need to be moved using one day before current date
-
+            //Update a customer's next and last appointment dates
+            customerAdapter.UpdateLastAppointment();
 
 
             businessDataSet bDataSet = new businessDataSet();
-            businessDataSetTableAdapters.AppointmentsTableAdapter appointmentAdapter =
-                new businessDataSetTableAdapters.AppointmentsTableAdapter();
+            
             bDataSet.Clear();
             appointmentAdapter.Fill(bDataSet.Appointments);
             dgvSchedule.DataSource = appointmentAdapter.TodaysAppointments();
@@ -97,8 +96,6 @@ namespace Final_Project
             string selectedDate = sDate.ToString();
 
             businessDataSet bDataSet = new businessDataSet();
-            businessDataSetTableAdapters.AppointmentsTableAdapter appointmentAdapter =
-                new businessDataSetTableAdapters.AppointmentsTableAdapter();
             bDataSet.Clear();
             appointmentAdapter.Fill(bDataSet.Appointments);
             dgvSchedule.DataSource = appointmentAdapter.GetSelectedDateAppointments(selectedDate);

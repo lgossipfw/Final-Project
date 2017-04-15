@@ -33,10 +33,22 @@ namespace Final_Project
         {
             custID = int.Parse(txtCustID.Text);
 
-            UpdateCustomerForm ucf = new UpdateCustomerForm();
-            ucf.setCustomerID(custID);
-            ucf.Show();
-            this.Hide();
+            //Check if customer id exists
+            if((customerAdapter.FindByCustID(custID).Rows.Count != 1))
+            {
+                lblStatus.Text = "ID not valid";
+                return;
+            }
+            else
+            {
+                UpdateCustomerForm ucf = new UpdateCustomerForm();
+                ucf.setCustomerID(custID);
+                ucf.ShowDialog();
+                this.Hide();
+                
+            }
+
+           
         }
 
         private void File_Home_Click(object sender, EventArgs e)

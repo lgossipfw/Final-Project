@@ -68,6 +68,7 @@ namespace Final_Project
         private void AppointmentForm_Load(object sender, EventArgs e)
         {
             adapter = new businessDataSetTableAdapters.AppointmentsTableAdapter();
+           
             dgvAppointments.DataSource = adapter.GetData();
 
         }
