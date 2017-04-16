@@ -64,9 +64,30 @@ namespace Final_Project
 
         private void txtUpdate_Click(object sender, EventArgs e)
         {
+            int cID = customerID;
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            string phoneNumber = txtPhoneNumber.Text;
+            string address = txtAddress.Text;
+            string city = txtCity.Text;
+            string state = txtState.Text;
+            string zipCode = txtZipCode.Text;
+            string email = txtEmail.Text;
 
+            foreach(Control c in Controls)
+            {
+              if(c is TextBox)
+                {
+                    TextBox t = (TextBox)c;
+                    if (t.Equals(""))
+                    {
+                        lblStatus.Text = t.Tag + " can't be blank";
+                        return;
+                    }
+                }
+            }
 
-
+            customerAdapter.UpdateCust(firstName, lastName, phoneNumber, address, city, state, zipCode, email, customerID);
 
             this.Hide();
             CustomerForm cf = new CustomerForm();
