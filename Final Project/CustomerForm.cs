@@ -31,10 +31,26 @@ namespace Final_Project
 
         private void btnUpdateCustomer_Click(object sender, EventArgs e)
         {
-            custID = int.Parse(txtCustID.Text);
+
+            if (txtCustID.Text.Equals(""))
+            {
+                lblStatus.Text = "ID can't be blank";
+                txtCustID.Focus();
+                return;
+            }else
+            {
+                if(!(int.TryParse(txtCustID.Text, out custID)))
+                {
+                    lblStatus.Text = "Input must be numerical";
+                    txtCustID.Focus();
+                    return;
+                }
+            }
+
+
 
             //Check if customer id exists
-            if((customerAdapter.FindByCustID(custID).Rows.Count != 1))
+            if ((customerAdapter.FindByCustID(custID).Rows.Count != 1))
             {
                 lblStatus.Text = "ID not valid";
                 return;
@@ -130,6 +146,38 @@ namespace Final_Project
             customerAdapter = new businessDataSetTableAdapters.CustomersTableAdapter();
 
             dgvCustomers.DataSource = customerAdapter.GetData();
+        }
+
+        private void btnDeleteCustomer_Click(object sender, EventArgs e)
+        {
+            if (txtCustID.Text.Equals(""))
+            {
+                lblStatus.Text = "ID can't be blank";
+                txtCustID.Focus();
+                return;
+            }
+            else
+            {
+                if (!(int.TryParse(txtCustID.Text, out custID)))
+                {
+                    lblStatus.Text = "Input must be numerical";
+                    txtCustID.Focus();
+                    return;
+                }
+            }
+
+            //Check if customer id exists
+            if ((customerAdapter.FindByCustID(custID).Rows.Count != 1))
+            {
+                lblStatus.Text = "ID not valid";
+                return;
+            }
+            else
+            {
+                customerAdapter.Delete(custID);
+                dgvCustomers.DataSource = customerAdapter.GetData();
+
+            }
         }
     }
 }

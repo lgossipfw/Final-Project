@@ -42,10 +42,35 @@ namespace Final_Project
 
             if (radCustID.Checked == true)
             {
-                //
-                int customerID = int.Parse(txtSearchInput.Text);
+                int customerID;
 
-                dgvCustomers.DataSource = customerAdapter.FindByCustID(customerID);
+                if (txtSearchInput.Text.Equals(""))
+                {
+                    lblStatus.Text = "ID can't be blank";
+                    txtSearchInput.Focus();
+                    return;
+                }
+                else
+                {
+                    if (!(int.TryParse(txtSearchInput.Text, out customerID)))
+                    {
+                        lblStatus.Text = "Input must be numerical";
+                        txtSearchInput.Focus();
+                        return;
+                    }
+                }
+
+                //Check if customer id exists
+                if ((customerAdapter.FindByCustID(customerID).Rows.Count != 1))
+                {
+                    lblStatus.Text = "ID not valid";
+                    return;
+                }
+                else
+                {
+                    dgvCustomers.DataSource = customerAdapter.FindByCustID(customerID);
+                }
+
             }
             else if(radFirstName.Checked == true)
             {

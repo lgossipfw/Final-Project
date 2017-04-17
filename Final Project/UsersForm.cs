@@ -75,7 +75,7 @@ namespace Final_Project
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
-           // adapter.Delete(int.Parse(txtUserID.Text));
+           //adapter.Delete(int.Parse(txtUserID.Text));
           
         }
     }
