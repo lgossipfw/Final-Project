@@ -33,6 +33,17 @@ namespace Final_Project
             Application.Exit();
         }
 
+        private bool IDExists(int id)
+        {
+            if ((customerAdapter.FindByCustID(id).Rows.Count != 1))
+            {
+                lblStatus.Text = "ID not valid";
+                return false;
+            }else
+            {
+                return true;
+            }
+        }
         private void btnSearch_Click(object sender, EventArgs e)
         {
             //Determine which radio button is checked
@@ -54,14 +65,14 @@ namespace Final_Project
                 {
                     if (!(int.TryParse(txtSearchInput.Text, out customerID)))
                     {
-                        lblStatus.Text = "Input must be numerical";
+                        lblStatus.Text = "Input must be a valid customer ID";
                         txtSearchInput.Focus();
                         return;
                     }
                 }
 
                 //Check if customer id exists
-                if ((customerAdapter.FindByCustID(customerID).Rows.Count != 1))
+                if (IDExists(customerID) == false)
                 {
                     lblStatus.Text = "ID not valid";
                     return;
@@ -74,14 +85,53 @@ namespace Final_Project
             }
             else if(radFirstName.Checked == true)
             {
+                string firstName = txtSearchInput.Text;
+
+                if (txtSearchInput.Text.Equals(""))
+                {
+                    lblStatus.Text = "First name can't be blank";
+                    txtSearchInput.Focus();
+                    return;
+                }
+                else
+                {
+                    dgvCustomers.DataSource = customerAdapter.FindByFirstName(firstName);
+                }
+
+
 
             }
             else if(radLastName.Checked == true)
             {
+                string lastName = txtSearchInput.Text;
+
+                if (txtSearchInput.Text.Equals(""))
+                {
+                    lblStatus.Text = "Last name can't be blank";
+                    txtSearchInput.Focus();
+                    return;
+                }
+                else
+                {
+                    dgvCustomers.DataSource = customerAdapter.FindByLastName(lastName);
+                }
 
             }
             else if(radCity.Checked == true)
             {
+
+                string city = txtSearchInput.Text;
+
+                if (txtSearchInput.Text.Equals(""))
+                {
+                    lblStatus.Text = "City can't be blank";
+                    txtSearchInput.Focus();
+                    return;
+                }
+                else
+                {
+                    dgvCustomers.DataSource = customerAdapter.FindByCity(city);
+                }
 
             }
             

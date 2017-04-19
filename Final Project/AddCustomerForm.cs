@@ -27,13 +27,24 @@ namespace Final_Project
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CustomerForm cf = new CustomerForm();
-            cf.Show();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             //add customer
+
+            foreach (Control c in Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox t = (TextBox)c;
+                    if (t.Equals(""))
+                    {
+                        lblStatus.Text = t.Tag + " can't be blank";
+                        return;
+                    }
+                }
+            }
             string firstName = txtFirstName.Text;
             string lastName = txtLastName.Text;
             string phoneNumber = txtPhoneNumber.Text;
@@ -42,15 +53,13 @@ namespace Final_Project
             string state = txtState.Text;
             string zipCode = txtZipCode.Text;
             string email = txtEmail.Text;
-            
+
             adapter.Insert(firstName,lastName,phoneNumber,address,city,state,zipCode,email);
 
 
-
-
             this.Hide();
-            CustomerForm cf = new CustomerForm();
-            cf.ShowDialog();
+            CustomerForm formCustomer = new CustomerForm();
+            formCustomer.ShowDialog();
         }
 
         private void AddCustomerForm_Load(object sender, EventArgs e)

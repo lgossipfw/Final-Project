@@ -89,7 +89,7 @@
             this.txtUpdate.Location = new System.Drawing.Point(547, 357);
             this.txtUpdate.Name = "txtUpdate";
             this.txtUpdate.Size = new System.Drawing.Size(117, 39);
-            this.txtUpdate.TabIndex = 41;
+            this.txtUpdate.TabIndex = 8;
             this.txtUpdate.Text = "Update";
             this.txtUpdate.UseVisualStyleBackColor = true;
             this.txtUpdate.Click += new System.EventHandler(this.txtUpdate_Click);
@@ -99,7 +99,7 @@
             this.btnCancel.Location = new System.Drawing.Point(327, 357);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(115, 39);
-            this.btnCancel.TabIndex = 42;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -179,28 +179,28 @@
             this.txtFirstName.Location = new System.Drawing.Point(205, 119);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(242, 26);
-            this.txtFirstName.TabIndex = 55;
+            this.txtFirstName.TabIndex = 0;
             // 
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(206, 180);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(241, 26);
-            this.txtLastName.TabIndex = 56;
+            this.txtLastName.TabIndex = 1;
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(205, 289);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(242, 26);
-            this.txtAddress.TabIndex = 57;
+            this.txtAddress.TabIndex = 3;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(637, 285);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(241, 26);
-            this.txtEmail.TabIndex = 62;
+            this.txtEmail.TabIndex = 7;
             // 
             // txtPhoneNumber
             // 
@@ -208,7 +208,7 @@
             this.txtPhoneNumber.Mask = "(999) 000-0000";
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(124, 26);
-            this.txtPhoneNumber.TabIndex = 58;
+            this.txtPhoneNumber.TabIndex = 2;
             // 
             // txtZipCode
             // 
@@ -216,7 +216,7 @@
             this.txtZipCode.Mask = "00000";
             this.txtZipCode.Name = "txtZipCode";
             this.txtZipCode.Size = new System.Drawing.Size(53, 26);
-            this.txtZipCode.TabIndex = 61;
+            this.txtZipCode.TabIndex = 6;
             this.txtZipCode.ValidatingType = typeof(int);
             // 
             // label5
@@ -233,7 +233,7 @@
             this.txtCity.Location = new System.Drawing.Point(638, 115);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(240, 26);
-            this.txtCity.TabIndex = 60;
+            this.txtCity.TabIndex = 4;
             // 
             // label6
             // 
@@ -250,7 +250,7 @@
             this.txtState.Mask = "AA";
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(36, 26);
-            this.txtState.TabIndex = 59;
+            this.txtState.TabIndex = 5;
             // 
             // label7
             // 

@@ -24,9 +24,9 @@ namespace Final_Project
 
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AddCustomerForm acf = new AddCustomerForm();
-            acf.Show();
+            //this.Hide();
+            AddCustomerForm frmAddCust = new AddCustomerForm();
+            frmAddCust.ShowDialog();
         }
 
         private void btnUpdateCustomer_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace Final_Project
                 UpdateCustomerForm ucf = new UpdateCustomerForm();
                 ucf.setCustomerID(custID);
                 ucf.ShowDialog();
-                this.Hide();
+                //this.Hide();
                 
             }
 
@@ -88,7 +88,7 @@ namespace Final_Project
 
         private void btnCustomerSearch_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             CustomerSearchForm csf = new CustomerSearchForm();
             csf.ShowDialog();
         }
