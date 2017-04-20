@@ -56,12 +56,6 @@ namespace Final_Project
 
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-
         private void txtUpdate_Click(object sender, EventArgs e)
         {
             int cID = customerID;

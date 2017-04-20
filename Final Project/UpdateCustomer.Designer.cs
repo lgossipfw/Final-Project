@@ -35,9 +35,6 @@
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,7 +53,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label9
@@ -103,32 +99,6 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(992, 33);
-            this.menuStrip1.TabIndex = 45;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(124, 30);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // lblID
             // 
@@ -180,6 +150,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(242, 26);
             this.txtFirstName.TabIndex = 0;
+            this.txtFirstName.Tag = "First Name";
             // 
             // txtLastName
             // 
@@ -187,6 +158,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(241, 26);
             this.txtLastName.TabIndex = 1;
+            this.txtLastName.Tag = "Last Name";
             // 
             // txtAddress
             // 
@@ -194,6 +166,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(242, 26);
             this.txtAddress.TabIndex = 3;
+            this.txtAddress.Tag = "Address";
             // 
             // txtEmail
             // 
@@ -201,6 +174,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(241, 26);
             this.txtEmail.TabIndex = 7;
+            this.txtEmail.Tag = "Email";
             // 
             // txtPhoneNumber
             // 
@@ -209,6 +183,7 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(124, 26);
             this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.Tag = "Phone Number";
             // 
             // txtZipCode
             // 
@@ -217,6 +192,7 @@
             this.txtZipCode.Name = "txtZipCode";
             this.txtZipCode.Size = new System.Drawing.Size(53, 26);
             this.txtZipCode.TabIndex = 6;
+            this.txtZipCode.Tag = "Zip Code";
             this.txtZipCode.ValidatingType = typeof(int);
             // 
             // label5
@@ -234,6 +210,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(240, 26);
             this.txtCity.TabIndex = 4;
+            this.txtCity.Tag = "City";
             // 
             // label6
             // 
@@ -251,6 +228,7 @@
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(36, 26);
             this.txtState.TabIndex = 5;
+            this.txtState.Tag = "State";
             // 
             // label7
             // 
@@ -295,17 +273,13 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtUpdate);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label9);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "UpdateCustomerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Customer";
             this.Load += new System.EventHandler(this.UpdateCustomerForm_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,10 +291,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.Button txtUpdate;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
