@@ -66,13 +66,15 @@ namespace Final_Project
                 usernameInTable = usernameInTable.Trim();
                 passwordInTable = passwordInTable.Trim();
 
+                int userID = row.Field<int>("Id");
+
                 //Check if row data matches user input for username and password
                 if (username.Equals(usernameInTable) && password.Equals(passwordInTable))
                 {
                     //If match
                     //Set Permission Level
                     if (permisionLevelInTable.Equals("Admin")){
-                        adapter.UpdateQuery(1);
+                        adapter.UpdateQuery(1, userID);
                     }
 
                     //Go to main form
@@ -97,7 +99,7 @@ namespace Final_Project
         {
             //Everytime this form loads, write the permissions level of the
             //first record of the SessionPermission table to 0
-            adapter.UpdateQuery(0);
+            adapter.UpdateQuery(0, 0);
         }
     }
 }

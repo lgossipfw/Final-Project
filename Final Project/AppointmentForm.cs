@@ -19,7 +19,10 @@ namespace Final_Project
             InitializeComponent();
         }
 
-        businessDataSetTableAdapters.AppointmentsTableAdapter adapter;
+        businessDataSetTableAdapters.AppointmentsTableAdapter appAdapter =
+                       new businessDataSetTableAdapters.AppointmentsTableAdapter();
+
+        businessDataSetTableAdapters.CustomersTableAdapter custAdapter;
 
         private void File_Home_Click(object sender, EventArgs e)
         {
@@ -49,13 +52,35 @@ namespace Final_Project
 
         private void btnUpdateAppointment_Click(object sender, EventArgs e)
         {
-            appointmentID = int.Parse(txtAppointmentID.Text);
+            if (txtAppointmentID.Text.Equals(""))
+            {
+                lblStatus.Text = "ID can't be blank";
+                txtAppointmentID.Focus();
+                return;
+            }
+            else
+            {
+                if (!(int.TryParse(txtAppointmentID.Text, out appointmentID)))
+                {
+                    lblStatus.Text = "Input must be a valid ID";
+                    txtAppointmentID.Focus();
+                    return;
+                }
+            }
 
-            this.Hide();
-            UpdateAppointmentForm uaf = new UpdateAppointmentForm();
-            uaf.SetAppointmentID(appointmentID);
-            uaf.ShowDialog();
-
+            //Check if appointment id exists
+            if ((appAdapter.FindByAppID(appointmentID).Rows.Count != 1))
+            {
+                lblStatus.Text = "ID not valid";
+                return;
+            }
+            else
+            {
+                this.Hide();
+                UpdateAppointmentForm frmUpdateApp = new UpdateAppointmentForm();
+                frmUpdateApp.SetAppointmentID(appointmentID);
+                frmUpdateApp.ShowDialog();
+            }
         }
 
         private void btnSearchFor_Click(object sender, EventArgs e)
@@ -67,10 +92,56 @@ namespace Final_Project
 
         private void AppointmentForm_Load(object sender, EventArgs e)
         {
-            adapter = new businessDataSetTableAdapters.AppointmentsTableAdapter();
-           
-            dgvAppointments.DataSource = adapter.GetData();
+            custAdapter = new businessDataSetTableAdapters.CustomersTableAdapter();
+
+            //dgvAppointments.DataSource = appAdapter.GetData();
+            //dgvAppointments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            //dgvAppointments.AutoResizeColumns();
+
+            businessDataSetTableAdapters.AppointmentsTableAdapter a =
+                new businessDataSetTableAdapters.AppointmentsTableAdapter();
+            dgvAppointments.DataSource = a.GetData();
+        }
+
+        private void btnDeleteAppointment_Click(object sender, EventArgs e)
+        {
+            if (txtAppointmentID.Text.Equals(""))
+            {
+                lblStatus.Text = "ID can't be blank";
+                txtAppointmentID.Focus();
+                return;
+            }
+            else
+            {
+                if (!(int.TryParse(txtAppointmentID.Text, out appointmentID)))
+                {
+                    lblStatus.Text = "Input must be a valid ID";
+                    txtAppointmentID.Focus();
+                    return;
+                }
+            }
+
+            //Check if appointment id exists
+            if ((appAdapter.FindByAppID(appointmentID).Rows.Count != 1))
+            {
+                lblStatus.Text = "ID not valid";
+                return;
+            }
+            else
+            {
+                //Delete corresponding customer appointment
+
+                int custID = -1;
+                custID = Convert.ToInt32(appAdapter.GetCustID(appointmentID));
+                //custAdapter.UpdateNextAppointment(null, custID);
+                MessageBox.Show("Cust ID: " + custID);
+                custAdapter.UpdateNextAppointment(null,custID);
+                appAdapter.Delete(appointmentID);
+                dgvAppointments.DataSource = appAdapter.GetData();
+            }
+
 
         }
+
     }
 }

@@ -30,7 +30,7 @@
         {
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
+            this.btnUpdateUser = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cboPermisssions = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,14 +64,15 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnAddUser
+            // btnUpdateUser
             // 
-            this.btnAddUser.Location = new System.Drawing.Point(615, 382);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(138, 38);
-            this.btnAddUser.TabIndex = 25;
-            this.btnAddUser.Text = "Add User";
-            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnUpdateUser.Location = new System.Drawing.Point(615, 382);
+            this.btnUpdateUser.Name = "btnUpdateUser";
+            this.btnUpdateUser.Size = new System.Drawing.Size(138, 38);
+            this.btnUpdateUser.TabIndex = 25;
+            this.btnUpdateUser.Text = "Update User";
+            this.btnUpdateUser.UseVisualStyleBackColor = true;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
             // 
             // label3
             // 
@@ -84,6 +85,7 @@
             // 
             // cboPermisssions
             // 
+            this.cboPermisssions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPermisssions.FormattingEnabled = true;
             this.cboPermisssions.Items.AddRange(new object[] {
             "Regular",
@@ -140,7 +142,7 @@
             // File_Exit
             // 
             this.File_Exit.Name = "File_Exit";
-            this.File_Exit.Size = new System.Drawing.Size(211, 30);
+            this.File_Exit.Size = new System.Drawing.Size(124, 30);
             this.File_Exit.Text = "Exit";
             this.File_Exit.Click += new System.EventHandler(this.File_Exit_Click);
             // 
@@ -187,7 +189,7 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnAddUser);
+            this.Controls.Add(this.btnUpdateUser);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboPermisssions);
             this.Controls.Add(this.label2);
@@ -211,7 +213,7 @@
 
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnAddUser;
+        private System.Windows.Forms.Button btnUpdateUser;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboPermisssions;
         private System.Windows.Forms.Label label2;

@@ -85,7 +85,9 @@ namespace Final_Project
             
             bDataSet.Clear();
             appointmentAdapter.Fill(bDataSet.Appointments);
+
             dgvSchedule.DataSource = appointmentAdapter.TodaysAppointments();
+            
             
 
         }

@@ -37,16 +37,11 @@ namespace Final_Project
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
-            String test = dtpTime.Value.TimeOfDay.ToString();
-            string test2 = dtpDate.Value.ToShortDateString();
-            string test3 = dtpDate.Value.ToString();
-            DateTime t = Convert.ToDateTime(test2);
-            //string m = dtpTime.ToString("tt");
+
             DateTime date = dtpDate.Value;
             DateTime time = dtpTime.Value;
-            string mn = time.ToString("tt");
-
             DateTime combined = date.Date.Add(time.TimeOfDay);
+
             string combinedstuff = combined.ToString();
             MessageBox.Show("Date: " + combinedstuff);
 

@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddAppointment = new System.Windows.Forms.Button();
+            this.btnUpdateAppointment = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtCustID = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
@@ -47,18 +45,21 @@
             this.lblappID = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCustID = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnAddAppointment
+            // btnUpdateAppointment
             // 
-            this.btnAddAppointment.Location = new System.Drawing.Point(605, 363);
-            this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(203, 38);
-            this.btnAddAppointment.TabIndex = 23;
-            this.btnAddAppointment.Text = "Add Appointment";
-            this.btnAddAppointment.UseVisualStyleBackColor = true;
+            this.btnUpdateAppointment.Location = new System.Drawing.Point(605, 363);
+            this.btnUpdateAppointment.Name = "btnUpdateAppointment";
+            this.btnUpdateAppointment.Size = new System.Drawing.Size(203, 38);
+            this.btnUpdateAppointment.TabIndex = 23;
+            this.btnUpdateAppointment.Text = "Update Appointment";
+            this.btnUpdateAppointment.UseVisualStyleBackColor = true;
+            this.btnUpdateAppointment.Click += new System.EventHandler(this.btnUpdateAppointment_Click);
             // 
             // btnCancel
             // 
@@ -69,22 +70,6 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // txtCustID
-            // 
-            this.txtCustID.Location = new System.Drawing.Point(185, 113);
-            this.txtCustID.Name = "txtCustID";
-            this.txtCustID.Size = new System.Drawing.Size(121, 26);
-            this.txtCustID.TabIndex = 20;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(76, 116);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 20);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Customer ID:";
             // 
             // label3
             // 
@@ -220,6 +205,23 @@
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(0, 17);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(76, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 20);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Customer ID:";
+            // 
+            // txtCustID
+            // 
+            this.txtCustID.Enabled = false;
+            this.txtCustID.Location = new System.Drawing.Point(185, 113);
+            this.txtCustID.Name = "txtCustID";
+            this.txtCustID.Size = new System.Drawing.Size(121, 26);
+            this.txtCustID.TabIndex = 20;
+            // 
             // UpdateAppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -230,7 +232,7 @@
             this.Controls.Add(this.lblAppointmentID);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnAddAppointment);
+            this.Controls.Add(this.btnUpdateAppointment);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtCustID);
             this.Controls.Add(this.label4);
@@ -255,10 +257,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAddAppointment;
+        private System.Windows.Forms.Button btnUpdateAppointment;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox txtCustID;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.DateTimePicker dtpTime;
@@ -274,5 +274,7 @@
         private System.Windows.Forms.Label lblappID;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtCustID;
     }
 }

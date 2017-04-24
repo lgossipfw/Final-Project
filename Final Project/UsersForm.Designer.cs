@@ -97,7 +97,7 @@
             this.btnUpdateUser.TabIndex = 25;
             this.btnUpdateUser.Text = "Update Existing";
             this.btnUpdateUser.UseVisualStyleBackColor = true;
-            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateAppointment_Click);
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
             // 
             // btnDeleteUser
             // 

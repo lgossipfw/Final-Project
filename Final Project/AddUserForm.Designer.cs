@@ -33,7 +33,7 @@
             this.File_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cboPermisssions = new System.Windows.Forms.ComboBox();
+            this.cboPermission = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -89,16 +89,17 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Password:";
             // 
-            // cboPermisssions
+            // cboPermission
             // 
-            this.cboPermisssions.FormattingEnabled = true;
-            this.cboPermisssions.Items.AddRange(new object[] {
+            this.cboPermission.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPermission.FormattingEnabled = true;
+            this.cboPermission.Items.AddRange(new object[] {
             "Regular",
             "Admin"});
-            this.cboPermisssions.Location = new System.Drawing.Point(175, 226);
-            this.cboPermisssions.Name = "cboPermisssions";
-            this.cboPermisssions.Size = new System.Drawing.Size(121, 28);
-            this.cboPermisssions.TabIndex = 13;
+            this.cboPermission.Location = new System.Drawing.Point(175, 226);
+            this.cboPermission.Name = "cboPermission";
+            this.cboPermission.Size = new System.Drawing.Size(121, 28);
+            this.cboPermission.TabIndex = 13;
             // 
             // label3
             // 
@@ -117,6 +118,7 @@
             this.btnAddUser.TabIndex = 15;
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // btnCancel
             // 
@@ -169,7 +171,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cboPermisssions);
+            this.Controls.Add(this.cboPermission);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -192,7 +194,7 @@
         private System.Windows.Forms.ToolStripMenuItem File_Exit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cboPermisssions;
+        private System.Windows.Forms.ComboBox cboPermission;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Button btnCancel;

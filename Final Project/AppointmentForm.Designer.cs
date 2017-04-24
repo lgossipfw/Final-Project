@@ -53,7 +53,7 @@
             this.dgvAppointments.Location = new System.Drawing.Point(29, 78);
             this.dgvAppointments.Name = "dgvAppointments";
             this.dgvAppointments.RowTemplate.Height = 28;
-            this.dgvAppointments.Size = new System.Drawing.Size(635, 340);
+            this.dgvAppointments.Size = new System.Drawing.Size(709, 340);
             this.dgvAppointments.TabIndex = 0;
             // 
             // menuStrip1
@@ -101,7 +101,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(730, 235);
+            this.label1.Location = new System.Drawing.Point(767, 238);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 20);
             this.label1.TabIndex = 19;
@@ -109,16 +109,16 @@
             // 
             // txtAppointmentID
             // 
-            this.txtAppointmentID.Location = new System.Drawing.Point(831, 232);
+            this.txtAppointmentID.Location = new System.Drawing.Point(868, 235);
             this.txtAppointmentID.Name = "txtAppointmentID";
             this.txtAppointmentID.Size = new System.Drawing.Size(100, 26);
             this.txtAppointmentID.TabIndex = 18;
             // 
             // btnSearchFor
             // 
-            this.btnSearchFor.Location = new System.Drawing.Point(734, 135);
+            this.btnSearchFor.Location = new System.Drawing.Point(771, 135);
             this.btnSearchFor.Name = "btnSearchFor";
-            this.btnSearchFor.Size = new System.Drawing.Size(221, 33);
+            this.btnSearchFor.Size = new System.Drawing.Size(197, 33);
             this.btnSearchFor.TabIndex = 17;
             this.btnSearchFor.Text = "Search For";
             this.btnSearchFor.UseVisualStyleBackColor = true;
@@ -126,9 +126,9 @@
             // 
             // btnUpdateAppointment
             // 
-            this.btnUpdateAppointment.Location = new System.Drawing.Point(734, 290);
+            this.btnUpdateAppointment.Location = new System.Drawing.Point(771, 290);
             this.btnUpdateAppointment.Name = "btnUpdateAppointment";
-            this.btnUpdateAppointment.Size = new System.Drawing.Size(221, 34);
+            this.btnUpdateAppointment.Size = new System.Drawing.Size(197, 34);
             this.btnUpdateAppointment.TabIndex = 16;
             this.btnUpdateAppointment.Text = "Update Existing";
             this.btnUpdateAppointment.UseVisualStyleBackColor = true;
@@ -136,18 +136,19 @@
             // 
             // btnDeleteAppointment
             // 
-            this.btnDeleteAppointment.Location = new System.Drawing.Point(734, 346);
+            this.btnDeleteAppointment.Location = new System.Drawing.Point(771, 346);
             this.btnDeleteAppointment.Name = "btnDeleteAppointment";
-            this.btnDeleteAppointment.Size = new System.Drawing.Size(221, 36);
+            this.btnDeleteAppointment.Size = new System.Drawing.Size(197, 36);
             this.btnDeleteAppointment.TabIndex = 15;
             this.btnDeleteAppointment.Text = "Delete";
             this.btnDeleteAppointment.UseVisualStyleBackColor = true;
+            this.btnDeleteAppointment.Click += new System.EventHandler(this.btnDeleteAppointment_Click);
             // 
             // btnAddNewAppointment
             // 
-            this.btnAddNewAppointment.Location = new System.Drawing.Point(734, 78);
+            this.btnAddNewAppointment.Location = new System.Drawing.Point(771, 78);
             this.btnAddNewAppointment.Name = "btnAddNewAppointment";
-            this.btnAddNewAppointment.Size = new System.Drawing.Size(221, 30);
+            this.btnAddNewAppointment.Size = new System.Drawing.Size(197, 30);
             this.btnAddNewAppointment.TabIndex = 14;
             this.btnAddNewAppointment.Text = "Add New";
             this.btnAddNewAppointment.UseVisualStyleBackColor = true;

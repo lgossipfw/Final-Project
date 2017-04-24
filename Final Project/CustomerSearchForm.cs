@@ -97,9 +97,6 @@ namespace Final_Project
                 {
                     dgvCustomers.DataSource = customerAdapter.FindByFirstName(firstName);
                 }
-
-
-
             }
             else if(radLastName.Checked == true)
             {
@@ -119,7 +116,6 @@ namespace Final_Project
             }
             else if(radCity.Checked == true)
             {
-
                 string city = txtSearchInput.Text;
 
                 if (txtSearchInput.Text.Equals(""))

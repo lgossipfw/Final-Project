@@ -24,7 +24,7 @@ namespace Final_Project
 
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             AddCustomerForm frmAddCust = new AddCustomerForm();
             frmAddCust.ShowDialog();
         }
@@ -47,6 +47,8 @@ namespace Final_Project
                 }
             }
 
+
+
             //Check if customer id exists
             if ((customerAdapter.FindByCustID(custID).Rows.Count != 1))
             {
@@ -58,7 +60,7 @@ namespace Final_Project
                 UpdateCustomerForm ucf = new UpdateCustomerForm();
                 ucf.setCustomerID(custID);
                 ucf.ShowDialog();
-                this.Hide();
+                //this.Hide();
                 
             }
 
@@ -69,7 +71,7 @@ namespace Final_Project
         {
             this.Hide();
             MainForm mf = new MainForm();
-            mf.ShowDialog();
+            mf.Show();
         }
 
         private void File_Logout_Click(object sender, EventArgs e)
@@ -86,7 +88,7 @@ namespace Final_Project
 
         private void btnCustomerSearch_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             CustomerSearchForm csf = new CustomerSearchForm();
             csf.ShowDialog();
         }
@@ -132,6 +134,11 @@ namespace Final_Project
 
                 outputFile.Close();
             }
+
+
+
+
+
         }
 
         private void CustomerForm_Load(object sender, EventArgs e)
@@ -139,7 +146,6 @@ namespace Final_Project
             customerAdapter = new businessDataSetTableAdapters.CustomersTableAdapter();
 
             dgvCustomers.DataSource = customerAdapter.GetData();
-            //dgvCustomers.DataSource = fuckyou.GetData();
         }
 
         private void btnDeleteCustomer_Click(object sender, EventArgs e)
@@ -170,6 +176,7 @@ namespace Final_Project
             {
                 customerAdapter.Delete(custID);
                 dgvCustomers.DataSource = customerAdapter.GetData();
+
             }
         }
     }
