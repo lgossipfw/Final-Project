@@ -52,6 +52,7 @@
             this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAppointments.Location = new System.Drawing.Point(29, 78);
             this.dgvAppointments.Name = "dgvAppointments";
+            this.dgvAppointments.ReadOnly = true;
             this.dgvAppointments.RowTemplate.Height = 28;
             this.dgvAppointments.Size = new System.Drawing.Size(709, 340);
             this.dgvAppointments.TabIndex = 0;

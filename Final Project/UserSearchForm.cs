@@ -11,7 +11,8 @@ using System.Windows.Forms;
 /* Name: Lea Gossman
  * Project: Final Project
  * Date: 4/26/17
- * Description:
+ * Description: Can search for a user by username or permission level and
+ * have the results displayed in the form
  * 
  */
 

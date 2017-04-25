@@ -59,6 +59,7 @@
             this.dvgAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgAppointments.Location = new System.Drawing.Point(232, 55);
             this.dvgAppointments.Name = "dvgAppointments";
+            this.dvgAppointments.ReadOnly = true;
             this.dvgAppointments.RowTemplate.Height = 28;
             this.dvgAppointments.Size = new System.Drawing.Size(748, 361);
             this.dvgAppointments.TabIndex = 11;
@@ -171,6 +172,7 @@
             this.Controls.Add(this.grpOptions);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AppointmentSearchForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Appointment Search";
             ((System.ComponentModel.ISupportInitialize)(this.dvgAppointments)).EndInit();
             this.grpOptions.ResumeLayout(false);

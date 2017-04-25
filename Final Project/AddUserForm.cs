@@ -11,7 +11,7 @@ using System.Windows.Forms;
 /* Name: Lea Gossman
  * Project: Final Project
  * Date: 4/26/17
- * Description:
+ * Description: Adds a user to the database using data based on user input
  * 
  */
 

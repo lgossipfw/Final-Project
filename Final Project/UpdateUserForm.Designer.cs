@@ -32,7 +32,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdateUser = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.cboPermisssions = new System.Windows.Forms.ComboBox();
+            this.cboPermissions = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
@@ -84,18 +84,18 @@
             this.label3.TabIndex = 24;
             this.label3.Text = "Permission Level:";
             // 
-            // cboPermisssions
+            // cboPermissions
             // 
-            this.cboPermisssions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPermisssions.FormattingEnabled = true;
-            this.cboPermisssions.Items.AddRange(new object[] {
+            this.cboPermissions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPermissions.FormattingEnabled = true;
+            this.cboPermissions.Items.AddRange(new object[] {
             "Regular",
             "Admin"});
-            this.cboPermisssions.Location = new System.Drawing.Point(177, 258);
-            this.cboPermisssions.Name = "cboPermisssions";
-            this.cboPermisssions.Size = new System.Drawing.Size(121, 28);
-            this.cboPermisssions.TabIndex = 2;
-            this.cboPermisssions.Tag = "Permission level";
+            this.cboPermissions.Location = new System.Drawing.Point(177, 258);
+            this.cboPermissions.Name = "cboPermissions";
+            this.cboPermissions.Size = new System.Drawing.Size(121, 28);
+            this.cboPermissions.TabIndex = 2;
+            this.cboPermissions.Tag = "Permission level";
             // 
             // label2
             // 
@@ -194,7 +194,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdateUser);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cboPermisssions);
+            this.Controls.Add(this.cboPermissions);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
@@ -218,7 +218,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnUpdateUser;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboPermisssions;
+        private System.Windows.Forms.ComboBox cboPermissions;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;

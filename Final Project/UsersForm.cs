@@ -11,8 +11,9 @@ using System.Windows.Forms;
 /* Name: Lea Gossman
  * Project: Final Project
  * Date: 4/26/17
- * Description:
- * 
+ * Description: Displays all users to the form. There are buttons for a user to
+ * add, update, search for, or delte users from the application. Update Existing
+ * and Delete buttons require a valid user ID to be entered.
  */
   
 namespace Final_Project
@@ -153,7 +154,8 @@ namespace Final_Project
         }
 
         /// <summary>
-        /// 
+        /// Validates and sends a user id to be updated in the 
+        /// Update Users form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

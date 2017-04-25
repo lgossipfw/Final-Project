@@ -143,6 +143,7 @@
             this.dgvSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSchedule.Location = new System.Drawing.Point(12, 64);
             this.dgvSchedule.Name = "dgvSchedule";
+            this.dgvSchedule.ReadOnly = true;
             this.dgvSchedule.RowTemplate.Height = 28;
             this.dgvSchedule.Size = new System.Drawing.Size(668, 378);
             this.dgvSchedule.TabIndex = 3;

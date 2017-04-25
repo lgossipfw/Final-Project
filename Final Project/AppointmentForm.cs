@@ -8,6 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* Name: Lea Gossman
+ * Project: Final Project
+ * Date: 4/26/17
+ * Description: Displays all appointments to the form. There are buttons for a user to
+ * add, update, search for, or delete appointments from the application. Update Existing
+ * and Delete buttons require a valid appointment ID to be entered.
+ */
+
 namespace Final_Project
 {
     public partial class AppointmentForm : Form
