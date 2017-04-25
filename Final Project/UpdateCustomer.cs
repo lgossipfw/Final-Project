@@ -8,40 +8,61 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* Name: Lea Gossman
+ * Project: Final Project
+ * Date: 4/26/17
+ * Description:
+ * User can update fields for a customer in the application
+ */
+
 namespace Final_Project
 {
 
     public partial class UpdateCustomerForm : Form
     {
+        //Hold customer ID
         private int customerID;
 
+        //Declare and initialize new customer table adapter
         businessDataSetTableAdapters.CustomersTableAdapter customerAdapter =
             new businessDataSetTableAdapters.CustomersTableAdapter();
 
+        /// <summary>
+        /// Form constructor
+        /// </summary>
         public UpdateCustomerForm()
         {
             InitializeComponent();
 
         }
 
+        /// <summary>
+        /// Set customer ID
+        /// </summary>
+        /// <param name="custID"></param>
         public void setCustomerID(int custID)
         {
             customerID = custID;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UpdateCustomerForm_Load(object sender, EventArgs e)
         {
             lblID.Text = customerID.ToString();
 
             //Load Data into fields on form
 
-            //Declare employee table
+            //Declare customer table
             businessDataSet.CustomersDataTable customerTable;
-            //Fill table with employee data
+            //Fill table with customer data
             customerTable = customerAdapter.GetData();
-            //Declare employee dataset row
+            //Declare customer dataset row
             businessDataSet.CustomersRow row;
-            //Set row equal to employee with matching employeeID
+            //Set row equal to customer with matching customer ID
             row = customerTable.FindByCustomerID(customerID);
             //Set fields to existing data
             txtFirstName.Text = row.FirstName;
