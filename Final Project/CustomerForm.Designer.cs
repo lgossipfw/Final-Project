@@ -112,7 +112,7 @@
             this.btnCustomerSearch.Location = new System.Drawing.Point(759, 101);
             this.btnCustomerSearch.Name = "btnCustomerSearch";
             this.btnCustomerSearch.Size = new System.Drawing.Size(221, 33);
-            this.btnCustomerSearch.TabIndex = 10;
+            this.btnCustomerSearch.TabIndex = 1;
             this.btnCustomerSearch.Text = "Search For";
             this.btnCustomerSearch.UseVisualStyleBackColor = true;
             this.btnCustomerSearch.Click += new System.EventHandler(this.btnCustomerSearch_Click);
@@ -122,7 +122,7 @@
             this.btnUpdateCustomer.Location = new System.Drawing.Point(759, 256);
             this.btnUpdateCustomer.Name = "btnUpdateCustomer";
             this.btnUpdateCustomer.Size = new System.Drawing.Size(221, 34);
-            this.btnUpdateCustomer.TabIndex = 9;
+            this.btnUpdateCustomer.TabIndex = 3;
             this.btnUpdateCustomer.Text = "Update Existing";
             this.btnUpdateCustomer.UseVisualStyleBackColor = true;
             this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
@@ -132,7 +132,7 @@
             this.btnDeleteCustomer.Location = new System.Drawing.Point(759, 312);
             this.btnDeleteCustomer.Name = "btnDeleteCustomer";
             this.btnDeleteCustomer.Size = new System.Drawing.Size(221, 36);
-            this.btnDeleteCustomer.TabIndex = 8;
+            this.btnDeleteCustomer.TabIndex = 4;
             this.btnDeleteCustomer.Text = "Delete";
             this.btnDeleteCustomer.UseVisualStyleBackColor = true;
             this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
@@ -142,7 +142,7 @@
             this.btnAddNewCustomer.Location = new System.Drawing.Point(759, 44);
             this.btnAddNewCustomer.Name = "btnAddNewCustomer";
             this.btnAddNewCustomer.Size = new System.Drawing.Size(221, 30);
-            this.btnAddNewCustomer.TabIndex = 7;
+            this.btnAddNewCustomer.TabIndex = 0;
             this.btnAddNewCustomer.Text = "Add New";
             this.btnAddNewCustomer.UseVisualStyleBackColor = true;
             this.btnAddNewCustomer.Click += new System.EventHandler(this.btnAddNewCustomer_Click);
@@ -161,7 +161,7 @@
             this.txtCustID.Location = new System.Drawing.Point(856, 198);
             this.txtCustID.Name = "txtCustID";
             this.txtCustID.Size = new System.Drawing.Size(100, 26);
-            this.txtCustID.TabIndex = 11;
+            this.txtCustID.TabIndex = 2;
             // 
             // label1
             // 

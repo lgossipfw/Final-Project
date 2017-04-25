@@ -159,6 +159,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(242, 26);
             this.txtFirstName.TabIndex = 0;
+            this.txtFirstName.Tag = "First name";
             // 
             // txtLastName
             // 
@@ -166,6 +167,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(241, 26);
             this.txtLastName.TabIndex = 1;
+            this.txtLastName.Tag = "Last name";
             // 
             // txtAddress
             // 
@@ -173,6 +175,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(242, 26);
             this.txtAddress.TabIndex = 3;
+            this.txtAddress.Tag = "Address";
             // 
             // txtPhoneNumber
             // 
@@ -181,6 +184,7 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(124, 26);
             this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.Tag = "Phone number";
             // 
             // txtState
             // 
@@ -189,6 +193,7 @@
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(36, 26);
             this.txtState.TabIndex = 5;
+            this.txtState.Tag = "State";
             // 
             // btnAddCustomer
             // 
@@ -206,6 +211,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(240, 26);
             this.txtCity.TabIndex = 4;
+            this.txtCity.Tag = "City";
             // 
             // txtZipCode
             // 
@@ -214,6 +220,7 @@
             this.txtZipCode.Name = "txtZipCode";
             this.txtZipCode.Size = new System.Drawing.Size(53, 26);
             this.txtZipCode.TabIndex = 6;
+            this.txtZipCode.Tag = "Zip Code";
             this.txtZipCode.ValidatingType = typeof(int);
             // 
             // txtEmail
@@ -222,6 +229,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(241, 26);
             this.txtEmail.TabIndex = 7;
+            this.txtEmail.Tag = "Email address";
             // 
             // btnCancel
             // 

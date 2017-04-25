@@ -77,14 +77,14 @@
             this.txtUserID.Location = new System.Drawing.Point(831, 232);
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(100, 26);
-            this.txtUserID.TabIndex = 27;
+            this.txtUserID.TabIndex = 2;
             // 
             // btnSearchFor
             // 
             this.btnSearchFor.Location = new System.Drawing.Point(734, 135);
             this.btnSearchFor.Name = "btnSearchFor";
             this.btnSearchFor.Size = new System.Drawing.Size(221, 33);
-            this.btnSearchFor.TabIndex = 26;
+            this.btnSearchFor.TabIndex = 1;
             this.btnSearchFor.Text = "Search For";
             this.btnSearchFor.UseVisualStyleBackColor = true;
             this.btnSearchFor.Click += new System.EventHandler(this.btnSearchFor_Click);
@@ -94,7 +94,7 @@
             this.btnUpdateUser.Location = new System.Drawing.Point(734, 290);
             this.btnUpdateUser.Name = "btnUpdateUser";
             this.btnUpdateUser.Size = new System.Drawing.Size(221, 34);
-            this.btnUpdateUser.TabIndex = 25;
+            this.btnUpdateUser.TabIndex = 3;
             this.btnUpdateUser.Text = "Update Existing";
             this.btnUpdateUser.UseVisualStyleBackColor = true;
             this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
@@ -104,7 +104,7 @@
             this.btnDeleteUser.Location = new System.Drawing.Point(734, 346);
             this.btnDeleteUser.Name = "btnDeleteUser";
             this.btnDeleteUser.Size = new System.Drawing.Size(221, 36);
-            this.btnDeleteUser.TabIndex = 24;
+            this.btnDeleteUser.TabIndex = 4;
             this.btnDeleteUser.Text = "Delete";
             this.btnDeleteUser.UseVisualStyleBackColor = true;
             this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
@@ -114,7 +114,7 @@
             this.btnAddNewUser.Location = new System.Drawing.Point(734, 78);
             this.btnAddNewUser.Name = "btnAddNewUser";
             this.btnAddNewUser.Size = new System.Drawing.Size(221, 30);
-            this.btnAddNewUser.TabIndex = 23;
+            this.btnAddNewUser.TabIndex = 0;
             this.btnAddNewUser.Text = "Add New";
             this.btnAddNewUser.UseVisualStyleBackColor = true;
             this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);

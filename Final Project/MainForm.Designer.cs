@@ -135,7 +135,7 @@
             this.dtpAppointmentsDate.Location = new System.Drawing.Point(691, 104);
             this.dtpAppointmentsDate.Name = "dtpAppointmentsDate";
             this.dtpAppointmentsDate.Size = new System.Drawing.Size(283, 26);
-            this.dtpAppointmentsDate.TabIndex = 2;
+            this.dtpAppointmentsDate.TabIndex = 0;
             this.dtpAppointmentsDate.ValueChanged += new System.EventHandler(this.dtpAppointmentsDate_ValueChanged);
             // 
             // dgvSchedule
@@ -144,7 +144,7 @@
             this.dgvSchedule.Location = new System.Drawing.Point(12, 64);
             this.dgvSchedule.Name = "dgvSchedule";
             this.dgvSchedule.RowTemplate.Height = 28;
-            this.dgvSchedule.Size = new System.Drawing.Size(646, 378);
+            this.dgvSchedule.Size = new System.Drawing.Size(668, 378);
             this.dgvSchedule.TabIndex = 3;
             // 
             // label1

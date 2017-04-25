@@ -3267,8 +3267,8 @@ SELECT CustomerID, FirstName, LastName, PhoneNumber, Address, City, State, ZipCo
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[6].Connection = this.Connection;
             this._commandCollection[6].CommandText = "SELECT CustomerID, FirstName, LastName, PhoneNumber, Address, City, State, ZipCod" +
-                "e, Email, LastAppointment, NextAppointment\nFROM   Customers\nWHERE (LastAppointme" +
-                "nt < DATEADD(month, - 6, GETDATE()))";
+                "e, Email, LastAppointment, NextAppointment\r\nFROM   Customers\r\nWHERE (LastAppoint" +
+                "ment < DATEADD(month, - 6, GETDATE()))";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[7].Connection = this.Connection;

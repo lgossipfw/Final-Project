@@ -24,7 +24,7 @@ namespace Final_Project
 
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             AddCustomerForm frmAddCust = new AddCustomerForm();
             frmAddCust.ShowDialog();
         }
@@ -60,7 +60,7 @@ namespace Final_Project
                 UpdateCustomerForm ucf = new UpdateCustomerForm();
                 ucf.setCustomerID(custID);
                 ucf.ShowDialog();
-                //this.Hide();
+                this.Hide();
                 
             }
 
@@ -88,7 +88,7 @@ namespace Final_Project
 
         private void btnCustomerSearch_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             CustomerSearchForm csf = new CustomerSearchForm();
             csf.ShowDialog();
         }
@@ -103,8 +103,9 @@ namespace Final_Project
 
             businessDataSet bDataSet = new businessDataSet();
             customerAdapter = new businessDataSetTableAdapters.CustomersTableAdapter();
+
             bDataSet.Clear();
-            customerAdapter.Fill(bDataSet.Customers);
+            //customerAdapter.Fill(bDataSet.Customers);
             DataTable dt = new DataTable();
             dt = customerAdapter.SixMonths();
             string line = "";
@@ -175,6 +176,7 @@ namespace Final_Project
             else
             {
                 customerAdapter.Delete(custID);
+                txtCustID.Clear();
                 dgvCustomers.DataSource = customerAdapter.GetData();
 
             }

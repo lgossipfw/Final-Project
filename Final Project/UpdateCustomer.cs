@@ -97,6 +97,8 @@ namespace Final_Project
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
+            CustomerForm frmCustomer = new CustomerForm();
+            frmCustomer.ShowDialog();
         }
     }
 }

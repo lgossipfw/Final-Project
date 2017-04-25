@@ -69,7 +69,7 @@
             // File_Exit
             // 
             this.File_Exit.Name = "File_Exit";
-            this.File_Exit.Size = new System.Drawing.Size(211, 30);
+            this.File_Exit.Size = new System.Drawing.Size(124, 30);
             this.File_Exit.Text = "Exit";
             this.File_Exit.Click += new System.EventHandler(this.File_Exit_Click);
             // 
@@ -101,7 +101,8 @@
             this.cboAppReason.Location = new System.Drawing.Point(182, 177);
             this.cboAppReason.Name = "cboAppReason";
             this.cboAppReason.Size = new System.Drawing.Size(121, 28);
-            this.cboAppReason.TabIndex = 3;
+            this.cboAppReason.TabIndex = 1;
+            this.cboAppReason.Tag = "Appointment reason";
             // 
             // dtpTime
             // 
@@ -111,7 +112,8 @@
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.ShowUpDown = true;
             this.dtpTime.Size = new System.Drawing.Size(203, 26);
-            this.dtpTime.TabIndex = 4;
+            this.dtpTime.TabIndex = 3;
+            this.dtpTime.Tag = "Appointment time";
             this.dtpTime.Value = new System.DateTime(2017, 4, 8, 14, 22, 0, 0);
             // 
             // dtpDate
@@ -121,7 +123,8 @@
             this.dtpDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(200, 26);
-            this.dtpDate.TabIndex = 5;
+            this.dtpDate.TabIndex = 2;
+            this.dtpDate.Tag = "Appointment date";
             // 
             // label3
             // 
@@ -146,14 +149,15 @@
             this.txtCustID.Location = new System.Drawing.Point(182, 65);
             this.txtCustID.Name = "txtCustID";
             this.txtCustID.Size = new System.Drawing.Size(121, 26);
-            this.txtCustID.TabIndex = 8;
+            this.txtCustID.TabIndex = 0;
+            this.txtCustID.Tag = "Customer ID";
             // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(182, 363);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(203, 38);
-            this.btnCancel.TabIndex = 10;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -163,7 +167,7 @@
             this.btnAddAppointment.Location = new System.Drawing.Point(605, 363);
             this.btnAddAppointment.Name = "btnAddAppointment";
             this.btnAddAppointment.Size = new System.Drawing.Size(203, 38);
-            this.btnAddAppointment.TabIndex = 11;
+            this.btnAddAppointment.TabIndex = 4;
             this.btnAddAppointment.Text = "Add Appointment";
             this.btnAddAppointment.UseVisualStyleBackColor = true;
             this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);

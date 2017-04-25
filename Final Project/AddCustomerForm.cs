@@ -8,6 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* Name: Lea Gossman
+ * Project: Final Project
+ * Date: 4/26/17
+ * Description:
+ * 
+ */
+
 namespace Final_Project
 {
     public partial class AddCustomerForm : Form
@@ -17,16 +24,29 @@ namespace Final_Project
             InitializeComponent();
         }
 
+        //Declare customer table adapter
         businessDataSetTableAdapters.CustomersTableAdapter adapter;
 
+        /// <summary>
+        /// Exits the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void File_Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
+            CustomerForm frmCustomer = new CustomerForm();
+            frmCustomer.ShowDialog();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)

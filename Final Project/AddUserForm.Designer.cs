@@ -99,7 +99,8 @@
             this.cboPermission.Location = new System.Drawing.Point(175, 226);
             this.cboPermission.Name = "cboPermission";
             this.cboPermission.Size = new System.Drawing.Size(121, 28);
-            this.cboPermission.TabIndex = 13;
+            this.cboPermission.TabIndex = 2;
+            this.cboPermission.Tag = "Permission level";
             // 
             // label3
             // 
@@ -115,7 +116,7 @@
             this.btnAddUser.Location = new System.Drawing.Point(615, 382);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(138, 38);
-            this.btnAddUser.TabIndex = 15;
+            this.btnAddUser.TabIndex = 3;
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.UseVisualStyleBackColor = true;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
@@ -125,7 +126,7 @@
             this.btnCancel.Location = new System.Drawing.Point(312, 382);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(140, 38);
-            this.btnCancel.TabIndex = 16;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -135,14 +136,16 @@
             this.txtUsername.Location = new System.Drawing.Point(175, 97);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(115, 26);
-            this.txtUsername.TabIndex = 17;
+            this.txtUsername.TabIndex = 0;
+            this.txtUsername.Tag = "Username";
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(175, 155);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(115, 26);
-            this.txtPassword.TabIndex = 18;
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.Tag = "Password";
             // 
             // statusStrip1
             // 

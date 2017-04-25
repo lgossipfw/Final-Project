@@ -52,14 +52,15 @@
             this.txtPassword.Location = new System.Drawing.Point(177, 187);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(115, 26);
-            this.txtPassword.TabIndex = 28;
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.Tag = "Password";
             // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(312, 382);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(140, 38);
-            this.btnCancel.TabIndex = 26;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -69,7 +70,7 @@
             this.btnUpdateUser.Location = new System.Drawing.Point(615, 382);
             this.btnUpdateUser.Name = "btnUpdateUser";
             this.btnUpdateUser.Size = new System.Drawing.Size(138, 38);
-            this.btnUpdateUser.TabIndex = 25;
+            this.btnUpdateUser.TabIndex = 3;
             this.btnUpdateUser.Text = "Update User";
             this.btnUpdateUser.UseVisualStyleBackColor = true;
             this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
@@ -93,7 +94,8 @@
             this.cboPermisssions.Location = new System.Drawing.Point(177, 258);
             this.cboPermisssions.Name = "cboPermisssions";
             this.cboPermisssions.Size = new System.Drawing.Size(121, 28);
-            this.cboPermisssions.TabIndex = 23;
+            this.cboPermisssions.TabIndex = 2;
+            this.cboPermisssions.Tag = "Permission level";
             // 
             // label2
             // 
@@ -169,7 +171,8 @@
             this.txtUsername.Location = new System.Drawing.Point(177, 129);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(115, 26);
-            this.txtUsername.TabIndex = 27;
+            this.txtUsername.TabIndex = 0;
+            this.txtUsername.Tag = "Username";
             // 
             // lblUserID
             // 

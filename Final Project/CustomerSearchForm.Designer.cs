@@ -136,7 +136,7 @@
             this.btnSearch.Location = new System.Drawing.Point(19, 327);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(163, 37);
-            this.btnSearch.TabIndex = 3;
+            this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -146,7 +146,7 @@
             this.btnCancel.Location = new System.Drawing.Point(19, 394);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(163, 37);
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -165,7 +165,7 @@
             this.txtSearchInput.Location = new System.Drawing.Point(19, 272);
             this.txtSearchInput.Name = "txtSearchInput";
             this.txtSearchInput.Size = new System.Drawing.Size(163, 26);
-            this.txtSearchInput.TabIndex = 6;
+            this.txtSearchInput.TabIndex = 4;
             // 
             // statusStrip1
             // 

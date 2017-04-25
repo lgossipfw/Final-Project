@@ -51,7 +51,8 @@
             this.txtSearchInput.Location = new System.Drawing.Point(19, 257);
             this.txtSearchInput.Name = "txtSearchInput";
             this.txtSearchInput.Size = new System.Drawing.Size(163, 26);
-            this.txtSearchInput.TabIndex = 12;
+            this.txtSearchInput.TabIndex = 2;
+            this.txtSearchInput.Tag = "Input";
             // 
             // dvgAppointments
             // 
@@ -67,7 +68,7 @@
             this.btnCancel.Location = new System.Drawing.Point(19, 379);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(163, 37);
-            this.btnCancel.TabIndex = 10;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -77,7 +78,7 @@
             this.btnSearch.Location = new System.Drawing.Point(19, 312);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(163, 37);
-            this.btnSearch.TabIndex = 9;
+            this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 

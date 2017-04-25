@@ -33,7 +33,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.txtUpdate = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,15 +84,15 @@
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(0, 17);
             // 
-            // txtUpdate
+            // btnUpdate
             // 
-            this.txtUpdate.Location = new System.Drawing.Point(547, 357);
-            this.txtUpdate.Name = "txtUpdate";
-            this.txtUpdate.Size = new System.Drawing.Size(117, 39);
-            this.txtUpdate.TabIndex = 8;
-            this.txtUpdate.Text = "Update";
-            this.txtUpdate.UseVisualStyleBackColor = true;
-            this.txtUpdate.Click += new System.EventHandler(this.txtUpdate_Click);
+            this.btnUpdate.Location = new System.Drawing.Point(547, 357);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(117, 39);
+            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.txtUpdate_Click);
             // 
             // btnCancel
             // 
@@ -180,6 +180,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(242, 26);
             this.txtFirstName.TabIndex = 0;
+            this.txtFirstName.Tag = "First name";
             // 
             // txtLastName
             // 
@@ -187,6 +188,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(241, 26);
             this.txtLastName.TabIndex = 1;
+            this.txtLastName.Tag = "Last name";
             // 
             // txtAddress
             // 
@@ -194,6 +196,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(242, 26);
             this.txtAddress.TabIndex = 3;
+            this.txtAddress.Tag = "Adress";
             // 
             // txtEmail
             // 
@@ -201,6 +204,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(241, 26);
             this.txtEmail.TabIndex = 7;
+            this.txtEmail.Tag = "Email Address";
             // 
             // txtPhoneNumber
             // 
@@ -209,6 +213,7 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(124, 26);
             this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.Tag = "Phone number";
             // 
             // txtZipCode
             // 
@@ -217,6 +222,7 @@
             this.txtZipCode.Name = "txtZipCode";
             this.txtZipCode.Size = new System.Drawing.Size(53, 26);
             this.txtZipCode.TabIndex = 6;
+            this.txtZipCode.Tag = "Zip Code";
             this.txtZipCode.ValidatingType = typeof(int);
             // 
             // label5
@@ -234,6 +240,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(240, 26);
             this.txtCity.TabIndex = 4;
+            this.txtCity.Tag = "City";
             // 
             // label6
             // 
@@ -251,6 +258,7 @@
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(36, 26);
             this.txtState.TabIndex = 5;
+            this.txtState.Tag = "State";
             // 
             // label7
             // 
@@ -293,7 +301,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.txtUpdate);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label9);
@@ -315,7 +323,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
-        private System.Windows.Forms.Button txtUpdate;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;

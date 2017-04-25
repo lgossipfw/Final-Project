@@ -112,14 +112,14 @@
             this.txtAppointmentID.Location = new System.Drawing.Point(868, 235);
             this.txtAppointmentID.Name = "txtAppointmentID";
             this.txtAppointmentID.Size = new System.Drawing.Size(100, 26);
-            this.txtAppointmentID.TabIndex = 18;
+            this.txtAppointmentID.TabIndex = 2;
             // 
             // btnSearchFor
             // 
             this.btnSearchFor.Location = new System.Drawing.Point(771, 135);
             this.btnSearchFor.Name = "btnSearchFor";
             this.btnSearchFor.Size = new System.Drawing.Size(197, 33);
-            this.btnSearchFor.TabIndex = 17;
+            this.btnSearchFor.TabIndex = 1;
             this.btnSearchFor.Text = "Search For";
             this.btnSearchFor.UseVisualStyleBackColor = true;
             this.btnSearchFor.Click += new System.EventHandler(this.btnSearchFor_Click);
@@ -129,7 +129,7 @@
             this.btnUpdateAppointment.Location = new System.Drawing.Point(771, 290);
             this.btnUpdateAppointment.Name = "btnUpdateAppointment";
             this.btnUpdateAppointment.Size = new System.Drawing.Size(197, 34);
-            this.btnUpdateAppointment.TabIndex = 16;
+            this.btnUpdateAppointment.TabIndex = 3;
             this.btnUpdateAppointment.Text = "Update Existing";
             this.btnUpdateAppointment.UseVisualStyleBackColor = true;
             this.btnUpdateAppointment.Click += new System.EventHandler(this.btnUpdateAppointment_Click);
@@ -139,7 +139,7 @@
             this.btnDeleteAppointment.Location = new System.Drawing.Point(771, 346);
             this.btnDeleteAppointment.Name = "btnDeleteAppointment";
             this.btnDeleteAppointment.Size = new System.Drawing.Size(197, 36);
-            this.btnDeleteAppointment.TabIndex = 15;
+            this.btnDeleteAppointment.TabIndex = 4;
             this.btnDeleteAppointment.Text = "Delete";
             this.btnDeleteAppointment.UseVisualStyleBackColor = true;
             this.btnDeleteAppointment.Click += new System.EventHandler(this.btnDeleteAppointment_Click);
@@ -149,7 +149,7 @@
             this.btnAddNewAppointment.Location = new System.Drawing.Point(771, 78);
             this.btnAddNewAppointment.Name = "btnAddNewAppointment";
             this.btnAddNewAppointment.Size = new System.Drawing.Size(197, 30);
-            this.btnAddNewAppointment.TabIndex = 14;
+            this.btnAddNewAppointment.TabIndex = 0;
             this.btnAddNewAppointment.Text = "Add New";
             this.btnAddNewAppointment.UseVisualStyleBackColor = true;
             this.btnAddNewAppointment.Click += new System.EventHandler(this.btnAddNewAppointment_Click);

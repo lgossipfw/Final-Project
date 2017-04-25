@@ -94,7 +94,8 @@
             this.txtSearchInput.Location = new System.Drawing.Point(19, 265);
             this.txtSearchInput.Name = "txtSearchInput";
             this.txtSearchInput.Size = new System.Drawing.Size(163, 26);
-            this.txtSearchInput.TabIndex = 21;
+            this.txtSearchInput.TabIndex = 3;
+            this.txtSearchInput.Tag = "Username";
             // 
             // dgvUsers
             // 
@@ -110,7 +111,7 @@
             this.btnCancel.Location = new System.Drawing.Point(19, 387);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(163, 37);
-            this.btnCancel.TabIndex = 19;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -120,7 +121,7 @@
             this.btnSearch.Location = new System.Drawing.Point(19, 320);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(163, 37);
-            this.btnSearch.TabIndex = 18;
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -171,7 +172,8 @@
             this.cboPermission.Location = new System.Drawing.Point(19, 220);
             this.cboPermission.Name = "cboPermission";
             this.cboPermission.Size = new System.Drawing.Size(163, 28);
-            this.cboPermission.TabIndex = 22;
+            this.cboPermission.TabIndex = 2;
+            this.cboPermission.Tag = "Permission level";
             // 
             // UserSearchForm
             // 

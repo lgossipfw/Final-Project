@@ -56,7 +56,7 @@
             this.btnUpdateAppointment.Location = new System.Drawing.Point(605, 363);
             this.btnUpdateAppointment.Name = "btnUpdateAppointment";
             this.btnUpdateAppointment.Size = new System.Drawing.Size(203, 38);
-            this.btnUpdateAppointment.TabIndex = 23;
+            this.btnUpdateAppointment.TabIndex = 4;
             this.btnUpdateAppointment.Text = "Update Appointment";
             this.btnUpdateAppointment.UseVisualStyleBackColor = true;
             this.btnUpdateAppointment.Click += new System.EventHandler(this.btnUpdateAppointment_Click);
@@ -66,7 +66,7 @@
             this.btnCancel.Location = new System.Drawing.Point(182, 363);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(203, 38);
-            this.btnCancel.TabIndex = 22;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -87,7 +87,8 @@
             this.dtpDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(200, 26);
-            this.dtpDate.TabIndex = 17;
+            this.dtpDate.TabIndex = 2;
+            this.dtpDate.Tag = "Appointment date";
             // 
             // dtpTime
             // 
@@ -97,7 +98,8 @@
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.ShowUpDown = true;
             this.dtpTime.Size = new System.Drawing.Size(203, 26);
-            this.dtpTime.TabIndex = 16;
+            this.dtpTime.TabIndex = 3;
+            this.dtpTime.Tag = "Appointment time";
             this.dtpTime.Value = new System.DateTime(2017, 4, 4, 14, 22, 0, 0);
             // 
             // cboAppReason
@@ -110,7 +112,8 @@
             this.cboAppReason.Location = new System.Drawing.Point(185, 225);
             this.cboAppReason.Name = "cboAppReason";
             this.cboAppReason.Size = new System.Drawing.Size(121, 28);
-            this.cboAppReason.TabIndex = 15;
+            this.cboAppReason.TabIndex = 1;
+            this.cboAppReason.Tag = "Appointment reason";
             // 
             // label2
             // 
@@ -220,7 +223,8 @@
             this.txtCustID.Location = new System.Drawing.Point(185, 113);
             this.txtCustID.Name = "txtCustID";
             this.txtCustID.Size = new System.Drawing.Size(121, 26);
-            this.txtCustID.TabIndex = 20;
+            this.txtCustID.TabIndex = 0;
+            this.txtCustID.Tag = "Customer ID";
             // 
             // UpdateAppointmentForm
             // 
