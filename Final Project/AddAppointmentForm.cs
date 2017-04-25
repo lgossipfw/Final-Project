@@ -8,6 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* Name: Lea Gossman
+ * Project: Final Project
+ * Date: 4/26/17
+ * Description:
+ * 
+ */
+
 namespace Final_Project
 {
     public partial class AddAppointmentForm : Form
@@ -53,8 +60,6 @@ namespace Final_Project
             this.Hide();
             AppointmentForm af = new AppointmentForm();
             af.ShowDialog();
-
-            //MessageBox.Show("Time: " + test + " Date: " + test2 + " Test: " + t + " New Thing: " + mn);
         }
     }
 }

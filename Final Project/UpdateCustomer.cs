@@ -46,7 +46,7 @@ namespace Final_Project
         }
 
         /// <summary>
-        /// 
+        /// Loads customer's data into fields on form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -77,24 +77,24 @@ namespace Final_Project
 
         }
 
+        /// <summary>
+        /// Exits the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-
-        private void txtUpdate_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Updates a given customer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int cID = customerID;
-            string firstName = txtFirstName.Text;
-            string lastName = txtLastName.Text;
-            string phoneNumber = txtPhoneNumber.Text;
-            string address = txtAddress.Text;
-            string city = txtCity.Text;
-            string state = txtState.Text;
-            string zipCode = txtZipCode.Text;
-            string email = txtEmail.Text;
-
+            //Check input isn't blank
             foreach(Control c in Controls)
             {
               if(c is TextBox)
@@ -108,13 +108,33 @@ namespace Final_Project
                 }
             }
 
+            //Set to given customer ID
+            int cID = customerID;
+
+            //Set fields to entered data
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            string phoneNumber = txtPhoneNumber.Text;
+            string address = txtAddress.Text;
+            string city = txtCity.Text;
+            string state = txtState.Text;
+            string zipCode = txtZipCode.Text;
+            string email = txtEmail.Text;
+
+            //Update Customer
             customerAdapter.UpdateCust(firstName, lastName, phoneNumber, address, city, state, zipCode, email, customerID);
 
+            //Close form and display Customer form
             this.Hide();
             CustomerForm cf = new CustomerForm();
             cf.ShowDialog();
         }
 
+        /// <summary>
+        /// Closes Update Customer form, opens Customer form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();

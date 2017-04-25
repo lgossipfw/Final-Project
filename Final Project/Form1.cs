@@ -8,33 +8,51 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* Name: Lea Gossman
+ * Project: Final Project
+ * Date: 4/26/17
+ * Description: Opens the Main Form of application if username and password are valid
+ */
+
 namespace Final_Project
 {
     public partial class LoginForm : Form
     {
        
-
+        /// <summary>
+        /// Form constructor
+        /// </summary>
         public LoginForm()
         {
             InitializeComponent();
             
         }
+
+        //Declare and intantiate session table adapter
         businessDataSetTableAdapters.SessionPermissionTableAdapter adapter
          = new businessDataSetTableAdapters.SessionPermissionTableAdapter();
 
-        businessDataSetTableAdapters.UsersTableAdapter userAdapter = new businessDataSetTableAdapters.UsersTableAdapter();
+        //Declare and instantiate user table adapter
+        businessDataSetTableAdapters.UsersTableAdapter userAdapter 
+            = new businessDataSetTableAdapters.UsersTableAdapter();
      
-        
+        /// <summary>
+        /// Opens the Main Form of application if username and password
+        /// are valid. Checks and validates user input
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //Clear status label
             lblStatus.Text = String.Empty;
 
+            //Declare user table
             businessDataSet.UsersDataTable userTable = userAdapter.GetData();
-
+            //Fill with user data
             userAdapter.Fill(userTable);
-            //Check database for valid credentials
-
+            
+            //Get input from fields on form
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
@@ -87,18 +105,28 @@ namespace Final_Project
 
                 }
             }
+            //Display error message
             lblStatus.Text = "Invalid credentials";
         }
 
+        /// <summary>
+        /// Exits the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void File_Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Writes the permissions level of the first record of the 
+        /// SessionPermission table to 0
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            //Everytime this form loads, write the permissions level of the
-            //first record of the SessionPermission table to 0
             adapter.UpdateQuery(0, 0);
         }
     }

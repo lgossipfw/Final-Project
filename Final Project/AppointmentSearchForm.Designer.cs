@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.txtSearchInput = new System.Windows.Forms.TextBox();
-            this.dvgAppointments = new System.Windows.Forms.DataGridView();
+            this.dgvAppointments = new System.Windows.Forms.DataGridView();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.grpOptions = new System.Windows.Forms.GroupBox();
@@ -40,7 +40,7 @@
             this.File_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgAppointments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.grpOptions.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -54,15 +54,15 @@
             this.txtSearchInput.TabIndex = 2;
             this.txtSearchInput.Tag = "Input";
             // 
-            // dvgAppointments
+            // dgvAppointments
             // 
-            this.dvgAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgAppointments.Location = new System.Drawing.Point(232, 55);
-            this.dvgAppointments.Name = "dvgAppointments";
-            this.dvgAppointments.ReadOnly = true;
-            this.dvgAppointments.RowTemplate.Height = 28;
-            this.dvgAppointments.Size = new System.Drawing.Size(748, 361);
-            this.dvgAppointments.TabIndex = 11;
+            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAppointments.Location = new System.Drawing.Point(232, 55);
+            this.dgvAppointments.Name = "dgvAppointments";
+            this.dgvAppointments.ReadOnly = true;
+            this.dgvAppointments.RowTemplate.Height = 28;
+            this.dgvAppointments.Size = new System.Drawing.Size(748, 361);
+            this.dgvAppointments.TabIndex = 11;
             // 
             // btnCancel
             // 
@@ -82,6 +82,7 @@
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // grpOptions
             // 
@@ -101,13 +102,13 @@
             this.radCustomerID.Name = "radCustomerID";
             this.radCustomerID.Size = new System.Drawing.Size(120, 24);
             this.radCustomerID.TabIndex = 1;
-            this.radCustomerID.TabStop = true;
             this.radCustomerID.Text = "CustomerID";
             this.radCustomerID.UseVisualStyleBackColor = true;
             // 
             // radAppointmentID
             // 
             this.radAppointmentID.AutoSize = true;
+            this.radAppointmentID.Checked = true;
             this.radAppointmentID.Location = new System.Drawing.Point(6, 38);
             this.radAppointmentID.Name = "radAppointmentID";
             this.radAppointmentID.Size = new System.Drawing.Size(146, 24);
@@ -166,7 +167,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.txtSearchInput);
-            this.Controls.Add(this.dvgAppointments);
+            this.Controls.Add(this.dgvAppointments);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.grpOptions);
@@ -174,7 +175,7 @@
             this.Name = "AppointmentSearchForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Appointment Search";
-            ((System.ComponentModel.ISupportInitialize)(this.dvgAppointments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.grpOptions.ResumeLayout(false);
             this.grpOptions.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -188,7 +189,7 @@
 
         #endregion
         private System.Windows.Forms.TextBox txtSearchInput;
-        private System.Windows.Forms.DataGridView dvgAppointments;
+        private System.Windows.Forms.DataGridView dgvAppointments;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.GroupBox grpOptions;

@@ -11,8 +11,7 @@ using System.Windows.Forms;
 /* Name: Lea Gossman
  * Project: Final Project
  * Date: 4/26/17
- * Description:
- * User can update fields for a user in the application
+ * Description: User can update fields for a user in the application
  */
 
 
