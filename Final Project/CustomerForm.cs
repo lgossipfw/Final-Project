@@ -36,6 +36,10 @@ namespace Final_Project
         businessDataSetTableAdapters.CustomersTableAdapter customerAdapter
               = new businessDataSetTableAdapters.CustomersTableAdapter();
 
+        //Declare and initialize customer table adapter
+        businessDataSetTableAdapters.AppointmentsTableAdapter appAdapter
+          = new businessDataSetTableAdapters.AppointmentsTableAdapter();
+
         /// <summary>
         /// Closes Customer Form, opens Add New Customer form
         /// </summary>
@@ -110,8 +114,8 @@ namespace Final_Project
         private void File_Logout_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LoginForm lf = new LoginForm();
-            lf.ShowDialog();
+            LoginForm frmLogin = new LoginForm();
+            frmLogin.ShowDialog();
         }
 
         /// <summary>
@@ -132,8 +136,8 @@ namespace Final_Project
         private void btnCustomerSearch_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CustomerSearchForm csf = new CustomerSearchForm();
-            csf.ShowDialog();
+            CustomerSearchForm frmCustomerSearch = new CustomerSearchForm();
+            frmCustomerSearch.ShowDialog();
         }
 
         /// <summary>
@@ -203,10 +207,20 @@ namespace Final_Project
         /// <param name="e"></param>
         private void CustomerForm_Load(object sender, EventArgs e)
         {
-            //initialize cutomer table adapter
-            customerAdapter = new businessDataSetTableAdapters.CustomersTableAdapter();
+            businessDataSetTableAdapters.CustomersTableAdapter ca =
+                new businessDataSetTableAdapters.CustomersTableAdapter();
+
             //Fill datagridview control with customer data
-            dgvCustomers.DataSource = customerAdapter.GetData();
+            try
+            {
+                dgvCustomers.DataSource = customerAdapter.GetData();
+
+            }
+            catch
+            {
+                dgvCustomers.DataSource = ca.GetData();
+            
+            }
         }
 
         /// <summary>
@@ -241,12 +255,27 @@ namespace Final_Project
                 lblStatus.Text = "ID not valid";
                 return;
             }
-            //Delete customer
+  
             else
             {
+                //Delete customer's appointments
+                businessDataSet.AppointmentsDataTable customerAppointmentsToDelete =
+                    appAdapter.FindByCustID(custID);
+
+                foreach(DataRow row in customerAppointmentsToDelete)
+                {
+                    if (row.Field<Int32>("CustomerID") == custID)
+                    {
+                        int appointmentID = row.Field<Int32>("AppointmentID");
+                        //int appID = int.Parse(appointmentID);
+                        appAdapter.Delete(appointmentID);
+                    }
+                }
+                //Delete customer
                 customerAdapter.Delete(custID);
                 txtCustID.Clear();
                 dgvCustomers.DataSource = customerAdapter.GetData();
+
 
             }
         }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 /* Name: Lea Gossman
  * Project: Final Project
  * Date: 4/26/17
- * Description:mUser can update fields for an appointment in the application
+ * Description: User can update fields for an appointment in the application
  */
 
 namespace Final_Project
@@ -61,18 +61,20 @@ namespace Final_Project
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AppointmentForm af = new AppointmentForm();
-            af.ShowDialog();
+            AppointmentForm frmAppointment = new AppointmentForm();
+            frmAppointment.ShowDialog();
         }
 
         /// <summary>
-        /// 
+        /// Fills form with appointment data
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void UpdateAppointmentForm_Load(object sender, EventArgs e)
         {
+            //Display appointment ID
             lblappID.Text = appointmentID.ToString();
+            //Initialize customer and appointment table adapters
             custAdapter = new businessDataSetTableAdapters.CustomersTableAdapter();
             appAdapter = new businessDataSetTableAdapters.AppointmentsTableAdapter();
             //Load Data into fields on form
@@ -100,6 +102,8 @@ namespace Final_Project
         /// <param name="e"></param>
         private void btnUpdateAppointment_Click(object sender, EventArgs e)
         {
+            int customerID;
+
             //Check input isn't blank
             foreach (Control c in Controls)
             {
@@ -114,15 +118,27 @@ namespace Final_Project
                 }
             }
 
+            if(!(int.TryParse(txtCustID.Text, out customerID)))
+            {
+                lblStatus.Text = "ID must be numerical";
+                txtCustID.Focus();
+                return;
+            }
+
+            if(cboAppReason.SelectedIndex == -1)
+            {
+                lblStatus.Text = "Appointment reason must be selected";
+                cboAppReason.Focus();
+                return;
+            }
+
             //Hold date of appointment
             DateTime date = dtpDate.Value;
             //Hold time of appointment
             DateTime time = dtpTime.Value;
             //Hold combinted date and time of appointment
             DateTime combined = date.Date.Add(time.TimeOfDay);
-
-            //Get customer ID
-            int customerID = int.Parse(txtCustID.Text);
+            
             //Get appointment reason
             string reason = cboAppReason.Text;
             

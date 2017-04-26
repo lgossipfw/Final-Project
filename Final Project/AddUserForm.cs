@@ -42,8 +42,8 @@ namespace Final_Project
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UsersForm uf = new UsersForm();
-            uf.ShowDialog();
+            UsersForm frmUsers = new UsersForm();
+            frmUsers.ShowDialog();
         }
 
         /// <summary>

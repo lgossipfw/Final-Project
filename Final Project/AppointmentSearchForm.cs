@@ -49,8 +49,8 @@ namespace Final_Project
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AppointmentForm af = new AppointmentForm();
-            af.ShowDialog();
+            AppointmentForm frmAppointment = new AppointmentForm();
+            frmAppointment.ShowDialog();
         }
 
         /// <summary>

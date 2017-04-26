@@ -11,7 +11,7 @@ using System.Windows.Forms;
 /* Name: Lea Gossman
  * Project: Final Project
  * Date: 4/26/17
- * Description:
+ * Description: Adds a new customer to the database based on user input
  * 
  */
 
@@ -38,7 +38,7 @@ namespace Final_Project
         }
 
         /// <summary>
-        /// 
+        /// Closes Add Customer form, opens Customer form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -49,10 +49,14 @@ namespace Final_Project
             frmCustomer.ShowDialog();
         }
 
+        /// <summary>
+        /// Inserts new customer to database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            //add customer
-
+            //Check input isn't blank
             foreach (Control c in Controls)
             {
                 if (c is TextBox)
@@ -65,6 +69,7 @@ namespace Final_Project
                     }
                 }
             }
+            //Set fields
             string firstName = txtFirstName.Text;
             string lastName = txtLastName.Text;
             string phoneNumber = txtPhoneNumber.Text;
@@ -74,9 +79,17 @@ namespace Final_Project
             string zipCode = txtZipCode.Text;
             string email = txtEmail.Text;
 
-            adapter.Insert(firstName,lastName,phoneNumber,address,city,state,zipCode,email);
+            //Add new customer to database
+            try
+            {
+                adapter.Insert(firstName, lastName, phoneNumber, address, city, state, zipCode, email);
+            }
+            catch
+            {
+                lblStatus.Text = "Error adding customer";
+            }
 
-
+            //Close form, open Customer form
             this.Hide();
             CustomerForm formCustomer = new CustomerForm();
             formCustomer.ShowDialog();
@@ -84,6 +97,7 @@ namespace Final_Project
 
         private void AddCustomerForm_Load(object sender, EventArgs e)
         {
+            //initialize customer table adapter
             adapter = new businessDataSetTableAdapters.CustomersTableAdapter();
         }
     }

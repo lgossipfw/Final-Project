@@ -38,8 +38,8 @@ namespace Final_Project
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CustomerForm cf = new CustomerForm();
-            cf.ShowDialog();
+            CustomerForm frmCustomer = new CustomerForm();
+            frmCustomer.ShowDialog();
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Final_Project
         }
 
         /// <summary>
-        /// 
+        /// Displays customer data based on critera selected by user
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

@@ -78,8 +78,8 @@ namespace Final_Project
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UsersForm uf = new UsersForm();
-            uf.ShowDialog();
+            UsersForm frmUser = new UsersForm();
+            frmUser.ShowDialog();
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Final_Project
             }
 
             //Validate combo box selection
-            if(cboPermissions.SelectedText == "")
+            if(cboPermissions.SelectedIndex == -1)
             {
                 lblStatus.Text = "Permission level must be selected";
                 return;

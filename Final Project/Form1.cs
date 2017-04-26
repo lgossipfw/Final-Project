@@ -50,7 +50,7 @@ namespace Final_Project
             //Declare user table
             businessDataSet.UsersDataTable userTable = userAdapter.GetData();
             //Fill with user data
-            userAdapter.Fill(userTable);
+            //userAdapter.Fill(userTable);
             
             //Get input from fields on form
             string username = txtUsername.Text;
@@ -94,12 +94,12 @@ namespace Final_Project
                     if (permisionLevelInTable.Equals("Admin")){
                         adapter.UpdateQuery(1, userID);
                     }
-
+                    //Close Login Form
+                    this.Hide();
                     //Go to main form
                     MainForm frmMain = new MainForm();
                     frmMain.ShowDialog();
-                    //Close Login Form
-                    this.Hide();
+                   
                     //Break Out of checking users
                     break;
 
@@ -107,6 +107,7 @@ namespace Final_Project
             }
             //Display error message
             lblStatus.Text = "Invalid credentials";
+            return;
         }
 
         /// <summary>
