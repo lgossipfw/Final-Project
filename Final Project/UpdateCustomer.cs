@@ -100,9 +100,19 @@ namespace Final_Project
               if(c is TextBox)
                 {
                     TextBox t = (TextBox)c;
-                    if (t.Equals(""))
+                    if (t.Text == "")
                     {
                         lblStatus.Text = t.Tag + " can't be blank";
+                        return;
+                    }
+                }
+                if (c is MaskedTextBox)
+                {
+                    MaskedTextBox mt = (MaskedTextBox)c;
+                    if (mt.MaskFull == false)
+                    {
+                        lblStatus.Text = mt.Tag + " can't be blank";
+                        mt.Focus();
                         return;
                     }
                 }

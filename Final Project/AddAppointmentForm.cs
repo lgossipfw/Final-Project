@@ -73,9 +73,10 @@ namespace Final_Project
                 if (c is TextBox)
                 {
                     TextBox t = (TextBox)c;
-                    if (t.Equals(""))
+                    if (t.Text == "")
                     {
                         lblStatus.Text = t.Tag + " can't be blank";
+                        t.Focus();
                         return;
                     }
                 }
@@ -125,15 +126,20 @@ namespace Final_Project
             {
                 lblStatus.Text = "Error adding appointment";
             }
-            try
+
+            if(adapter.FindByCustID(customerID).Rows.Count < 1)
             {
-                //Assign appointment to corresponding customer
-                custAdapter.UpdateNextAppointment(combined, customerID);
+                try
+                {
+                    //Assign appointment to corresponding customer
+                    custAdapter.UpdateNextAppointment(combined, customerID);
+                }
+                catch
+                {
+                    lblStatus.Text = "Error updating customer's next appointment";
+                }
             }
-            catch
-            {
-                lblStatus.Text = "Error updating customer's next appointment";
-            }
+        
             
 
             //Close form, open appointment form

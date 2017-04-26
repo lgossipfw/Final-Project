@@ -59,12 +59,14 @@ namespace Final_Project
                 if (c is TextBox)
                 {
                     TextBox t = (TextBox)c;
-                    if (t.Equals(""))
+                    if (t.Text == "")
                     {
                         lblStatus.Text = t.Tag + " can't be blank";
+                        t.Focus();
                         return;
                     }
                 }
+          
             }
 
             //Make sure combo box value is selected
